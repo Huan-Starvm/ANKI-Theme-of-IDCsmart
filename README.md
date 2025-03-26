@@ -4,11 +4,19 @@
   <img src="https://cloud.ogmiao.com/themes/web/ogmiao/img/2.webp" alt="橘喵云LOGO" width="600" />
 </p>
 
-<p align="center">
-  <a href="#"><img src="https://img.shields.io/github/stars/DYMTHH/OGMIA-Theme-of-IDCsmart?style=for-the-badge&color=pink" alt="收藏量" /></a>
-  <a href="#"><img src="https://img.shields.io/github/downloads/DYMTHH/OGMIA-Theme-of-IDCsmart/total?style=for-the-badge&color=purple" alt="下载量" /></a>
-  <a href="#"><img src="https://img.shields.io/github/license/DYMTHH/OGMIA-Theme-of-IDCsmart?style=for-the-badge&color=orange" alt="许可证" /></a>
-</p>
+<div align="center">
+
+---
+
+🏆 **项目数据** 🏆
+
+[![收藏数量](https://img.shields.io/github/stars/DYMTHH/OGMIA-Theme-of-IDCsmart?style=for-the-badge&color=pink&label=收藏数量)](https://github.com/DYMTHH/OGMIA-Theme-of-IDCsmart/stargazers)
+[![下载次数](https://img.shields.io/github/downloads/DYMTHH/OGMIA-Theme-of-IDCsmart/total?style=for-the-badge&color=purple&label=下载次数)](https://github.com/DYMTHH/OGMIA-Theme-of-IDCsmart/releases)
+[![开源协议](https://img.shields.io/github/license/DYMTHH/OGMIA-Theme-of-IDCsmart?style=for-the-badge&color=orange&label=开源协议)](https://github.com/DYMTHH/OGMIA-Theme-of-IDCsmart/blob/main/LICENSE)
+
+---
+
+</div>
 
 ## 🐱 项目介绍
 
