@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- 网站统计代码区域 - 开始 -->
+
+<!-- 网站统计代码区域 - 结束 -->
+<!-- 性能优化 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="{$setting.web_view}/img/1.webp" as="image">
+
+<!-- 字体优化 - 只加载必要的字体子集 -->
+<link href="{$setting.web_view}/fonts/Poppins-Regular-Medium-SemiBold-Bold.css" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript>
+  <link href="{$setting.web_view}/fonts/Poppins-Regular-Medium-SemiBold-Bold.css" rel="stylesheet">
+</noscript>
+<meta charset="UTF-8">
+<title>{:isset($title) ? $title : '橘喵云 | 专业全球IDC服务提供商'}</title>
+<meta name="description" content="{:isset($description) ? $description : '橘喵云是专业的全球IDC服务提供商，提供高品质的服务器托管、云服务、网络安全等全方位解决方案，助力企业数字化转型。'}">
+<meta name="keywords" content="{:isset($keywords) ? $keywords : '橘喵云,IDC服务,服务器托管,云服务,数据中心,网络安全,企业数字化,全球IDC'}">
+<meta name="author" content="橘喵云">
+<link rel="canonical" href="{$canonical|default='https://cloud.ogmiao.com/'}">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="{:isset($og_title) ? $og_title : '橘喵云 | 专业全球IDC服务提供商'}">
+<meta property="og:description" content="{$og_description|default='提供高品质的全球数据中心服务，包括服务器托管、云服务、网络安全等全方位解决方案'}">
+<meta property="og:image" content="{$og_image|default='{$setting.web_view}/img/2.webp'}">
+<meta property="og:url" content="{$og_url|default='https://cloud.ogmiao.com/'}">
+<meta property="og:type" content="website">
+<!-- Twitter Card metadata -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{:isset($twitter_title) ? $twitter_title : (isset($og_title) ? $og_title : '橘喵云 | 专业全球IDC服务提供商')}">
+<meta name="twitter:description" content="{:isset($twitter_description) ? $twitter_description : (isset($og_description) ? $og_description : '提供高品质的全球数据中心服务，包括服务器托管、云服务、网络安全等全方位解决方案')}">
+<meta name="twitter:image" content="{:isset($twitter_image) ? $twitter_image : (isset($og_image) ? $og_image : '{$setting.web_view}/img/2.webp')}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{$setting.web_view}/fonts/Poppins-Regular-Medium-SemiBold-Bold-ExtraBold.css" rel="stylesheet">
+
+<!-- 内联样式 -->
+<style>
+/* 定义CSS变量 */
+:root {
+--primary: #f08a5d;
+--primary-dark: #e67e22;
+--primary-light: #fad7a0;
+--secondary: #f9b384;
+--accent: #ffbe76;
+--dark: #2d3436;
+--light: #ffffff;
+--gray: #636e72;
+--gray-light: #f8f8f8;
+--footer-bg: #f5f5f5;
+--footer-text: #555555;
+--footer-title: #333333;
+--success: #26de81;
+--warning: #fed330;
+--danger: #fc5c65;
+--bg-gradient: linear-gradient(135deg, rgba(240, 138, 93, 0.8), rgba(249, 179, 132, 0.8));
+--card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+--card-hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+/* 响应式设计变量 */
+--container-max-width: 1200px;
+--container-padding: 15px;
+--section-padding-large: 6rem;
+--section-padding-medium: 4rem;
+--section-padding-small: 3rem;
+--grid-gap-large: 2rem;
+--grid-gap-medium: 1.5rem;
+--grid-gap-small: 1rem;
+--font-size-h1-large: 3.5rem;
+--font-size-h1-medium: 2.8rem;
+--font-size-h1-small: 2.2rem;
+--font-size-h1-xs: 1.8rem;
+--font-size-h2-large: 2.5rem;
+--font-size-h2-medium: 2.2rem;
+--font-size-h2-small: 1.8rem;
+--font-size-h2-xs: 1.5rem;
+}
+
+/* 添加在文件开头添加 - 更新字体 */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins", "PingFang SC", "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", "STHeiti",
+  "WenQuanYi Micro Hei", sans-serif;
+}
+
+@font-face {
+font-family: "PingFang SC";
+src: local("PingFang SC"), local("PingFangSC");
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: "Microsoft YaHei";
+src: local("Microsoft YaHei"), local("微软雅黑");
+font-weight: normal;
+font-style: normal;
+}
+
+html {
+font-size: 16px;
+scroll-behavior: smooth;
+}
+
+/* 响应式基础字体大小调整 */
+@media (max-width: 1200px) {
+html {
+  font-size: 15px;
+}
+}
+
+@media (max-width: 992px) {
+html {
+  font-size: 14px;
+}
+}
+
+@media (max-width: 768px) {
+html {
+  font-size: 13px;
+}
+}
+
+@media (max-width: 576px) {
+html {
+  font-size: 12px;
+}
+}
+
+body {
+line-height: 1.6;
+color: var(--dark);
+background-color: var(--light);
+overflow-x: hidden;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+opacity: 1;
+visibility: visible;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+.container {
+width: 90%;
+max-width: var(--container-max-width);
+margin: 0 auto;
+padding: 0 var(--container-padding);
+position: relative;
+z-index: 1;
+}
+
+@media (max-width: 576px) {
+.container {
+  width: 95%;
+  padding: 0 10px;
+}
+}
+
+/* 美化顶部导航栏 */
+header {
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 0;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.dark header {
+  background-color: var(--dark-bg);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* 美化logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.03);
+}
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  border-radius: 8px;
+  border: none;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.dark .logo {
+  color: var(--dark-primary);
+}
+
+.logo-container:hover .logo {
+  color: var(--primary-dark);
+}
+
+.dark .logo-container:hover .logo {
+  color: var(--dark-primary-light);
+}
+
+.nav-container {
+display: flex;
+align-items: center;
+}
+
+@media (max-width: 992px) {
+.nav-container {
+  position: fixed;
+  top: 70px; /* 调整为header的高度 */
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  background: white;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 101;
+  pointer-events: none;
+}
+
+.nav-container.active {
+  max-height: 500px;
+  opacity: 1;
+  pointer-events: auto;
+  padding: 1rem 0;
+}
+}
+
+@media (max-width: 576px) {
+.logo {
+  font-size: 1.5rem;
+}
+
+.logo-img {
+  width: 35px;
+  height: 35px;
+}
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 992px) {
+.nav-links {
+  width: 100%;
+  flex-direction: column;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0.8rem 0;
+  text-align: center;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.5rem 0;
+}
+}
+
+.nav-links li {
+margin-left: 25px;
+}
+
+/* 美化导航链接 */
+.nav-links a {
+  color: var(--dark);
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  background-color: rgba(240, 138, 93, 0.05);
+}
+
+.dark .nav-links a:hover {
+  background-color: rgba(208, 122, 77, 0.1);
+}
+
+.nav-links a::after {
+content: "";
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0;
+height: 2px;
+background-color: var(--primary);
+transition: width 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+/* 添加下拉菜单项的悬停效果 */
+@media (max-width: 992px) {
+.nav-links a::after {
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 50%;
+}
+}
+
+.mobile-menu-btn {
+display: none;
+background: none;
+border: none;
+color: var(--dark);
+font-size: 1.2rem;
+cursor: pointer;
+transition: transform 0.3s ease;
+position: relative;
+z-index: 102;
+}
+
+@media (max-width: 992px) {
+.mobile-menu-btn {
+  display: block;
+}
+}
+
+.mobile-menu-btn.active {
+transform: rotate(90deg);
+color: var(--primary);
+}
+
+.nav-buttons {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+margin-left: 1rem;
+}
+
+/* 美化导航按钮 */
+.btn-nav {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-login {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background-color: transparent;
+}
+
+.btn-login:hover {
+  background-color: rgba(240, 138, 93, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(240, 138, 93, 0.15);
+}
+
+.btn-register {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(240, 138, 93, 0.3);
+  border: none;
+}
+
+.btn-register:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(240, 138, 93, 0.4);
+}
+
+.dark .btn-login {
+  background-color: rgba(208, 122, 77, 0.05);
+  color: var(--dark-primary-light);
+  border-color: var(--dark-primary);
+}
+
+.dark .btn-login:hover {
+  background-color: rgba(208, 122, 77, 0.15);
+  box-shadow: 0 4px 12px rgba(208, 122, 77, 0.2);
+}
+
+.dark .btn-register {
+  background-color: var(--dark-primary);
+  color: var(--dark-text);
+  box-shadow: 0 4px 10px rgba(208, 122, 77, 0.3);
+}
+
+.dark .btn-register:hover {
+  background-color: #c06a3d;
+  box-shadow: 0 6px 15px rgba(208, 122, 77, 0.4);
+}
+
+/* 夜间模式切换开关 - 全新设计 */
+.dark-mode-switch {
+  position: relative;
+  width: 70px;
+  height: 38px;
+  border-radius: 19px;
+  background: linear-gradient(to bottom, #87CEEB, #E0F7FF);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+}
+
+.dark .dark-mode-switch {
+  background: linear-gradient(to bottom, #1a1a3a, #0D1317);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 太阳 */
+.sun {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #FFD700;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #FFD700;
+  left: 12px;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+}
+
+.dark .sun {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+/* 太阳光芒 */
+.sun::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 38px;
+  height: 38px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, rgba(255, 215, 0, 0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* 云朵 */
+.cloud {
+  position: absolute;
+  width: 32px;
+  height: 16px;
+  background: white;
+  border-radius: 16px;
+  right: 15px;
+  top: 10px;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 3;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 16px;
+  height: 16px;
+  top: -8px;
+  left: 4px;
+}
+
+.cloud::after {
+  width: 12px;
+  height: 12px;
+  top: -4px;
+  right: 4px;
+}
+
+.dark .cloud {
+  transform: translateX(-150px);
+  opacity: 0;
+}
+
+/* 月亮 */
+.moon {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #F4F4F4;
+  border-radius: 50%;
+  right: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+}
+
+.dark .moon {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* 月亮阴影 */
+.moon::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: #1a1a3a;
+  border-radius: 50%;
+  transform: translateX(-5px);
+}
+
+/* 星星 */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.dark .stars {
+  opacity: 1;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite alternate;
+}
+
+.star:nth-child(1) {
+  width: 2px;
+  height: 2px;
+  left: 20%;
+  top: 30%;
+  animation-delay: 0.2s;
+}
+
+.star:nth-child(2) {
+  width: 3px;
+  height: 3px;
+  left: 30%;
+  top: 50%;
+  animation-delay: 0.5s;
+}
+
+.star:nth-child(3) {
+  width: 2px;
+  height: 2px;
+  left: 50%;
+  top: 20%;
+  animation-delay: 0.8s;
+}
+
+.star:nth-child(4) {
+  width: 1px;
+  height: 1px;
+  left: 65%;
+  top: 60%;
+  animation-delay: 1.2s;
+}
+
+.star:nth-child(5) {
+  width: 2px;
+  height: 2px;
+  left: 80%;
+  top: 40%;
+  animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+/* 移除文字标签 */
+.mode-text {
+  display: none;
+}
+
+/* 移动端下拉菜单中的夜间模式开关样式修复 */
+@media (max-width: 992px) {
+  .nav-buttons .dark-mode-switch {
+    height: 38px;
+    width: 70px;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+  
+  .nav-container.active .nav-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .nav-container.active .btn-nav {
+    width: 45%;
+    max-width: 150px;
+  }
+  
+  .nav-container.active .dark-mode-switch {
+    order: 3;
+    margin-top: 0.5rem;
+  }
+  
+  /* 增大移动菜单按钮的点击区域 */
+  .mobile-menu-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+}
+
+/* 移除旧的按钮样式 */
+.btn-dark-mode {
+  display: none;
+}
+
+/* 夜间模式切换按钮 - 美化版 */
+/*.btn-dark-mode {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  cursor: pointer;
+}
+
+.btn-dark-mode::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(240, 138, 93, 0.2), rgba(249, 179, 132, 0.2));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 50%;
+}
+
+.btn-dark-mode:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-dark-mode:hover::before {
+  opacity: 1;
+}
+
+.dark .btn-dark-mode {
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark .btn-dark-mode::before {
+  background: linear-gradient(135deg, rgba(208, 122, 77, 0.2), rgba(217, 155, 116, 0.2));
+}
+
+/* 夜间模式切换图标动画 */
+/*.btn-dark-mode .icon-sun,
+.btn-dark-mode .icon-moon {
+  position: absolute;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-dark-mode .icon-sun {
+  opacity: 0;
+  transform: scale(0.5) rotate(-45deg);
+}
+
+.btn-dark-mode .icon-moon {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+.dark .btn-dark-mode .icon-sun {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+.dark .btn-dark-mode .icon-moon {
+  opacity: 0;
+  transform: scale(0.5) rotate(45deg);
+}*/
+
+/* 模式切换过渡遮罩 */
+.mode-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.dark .mode-transition-overlay {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 992px) {
+.nav-buttons {
+  margin-left: auto;
+  margin-right: 3rem;
+}
+
+.btn-nav {
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+}
+}
+
+/* 移动端导航优化 */
+@media (max-width: 992px) {
+  .nav-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 1rem 0 0.5rem;
+    gap: 1rem;
+  }
+
+  .btn-nav {
+    width: 45%;
+    max-width: 150px;
+  }
+  
+  /* 改进移动端导航容器的过渡效果 */
+  .nav-container {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  /* 优化移动端导航项间距 */
+  .nav-container.active {
+    padding: 0.8rem 0 1rem;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 360px) {
+.logo {
+  font-size: 1.3rem;
+}
+
+.mobile-menu-btn {
+  font-size: 1.3rem;
+}
+}
+
+/* 夜间模式样式 */
+:root {
+--dark-bg: #121212;
+--dark-card-bg: #1e1e1e;
+--dark-card-bg-hover: #252525;
+--dark-text: #e0e0e0;
+--dark-text-secondary: #aaaaaa;
+--dark-border: #333333;
+--dark-hover: #2a2a2a;
+--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+--dark-primary: #d07a4d; /* 降低亮度的主题色 */
+--dark-primary-light: #e0a080; /* 降低亮度的浅主题色 */
+--dark-secondary: #d99b74; /* 降低亮度的次要主题色 */
+--dark-accent: #dfae66; /* 降低亮度的强调色 */
+--dark-success: #26b871; /* 降低亮度的成功色 */
+--dark-warning: #deb320; /* 降低亮度的警告色 */
+--dark-danger: #dc5c55; /* 降低亮度的危险色 */
+}
+
+/* 全局背景和文本颜色 */
+.dark {
+background-color: #121212 !important;
+color: #e0e0e0 !important;
+}
+
+/* 确保所有section都有正确的背景色 */
+.dark section {
+background-color: #121212 !important;
+}
+
+/* 特定section的背景样式 */
+.dark .hero,
+.dark .datacenter,
+.dark .certificates,
+.dark .clients,
+.dark .news,
+.dark .why-us,
+.dark .faq,
+.dark .contact {
+background-color: #121212 !important;
+}
+
+/* 头部导航样式 */
+.dark header {
+background-color: var(--dark-bg);
+box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark .nav-links a {
+color: var(--dark-text);
+}
+
+.dark .nav-links a:hover {
+color: var(--dark-primary);
+}
+
+.dark .nav-links a::after {
+background-color: var(--dark-primary);
+}
+
+.dark .mobile-menu-btn {
+color: var(--dark-text);
+}
+
+/* 英雄区域样式 - 增强特异性 */
+.dark .hero {
+background-color: #121212 !important;
+}
+
+.dark .hero h1,
+.dark .section-title h2,
+.dark h3,
+.dark h4 {
+color: #e0e0e0 !important;
+}
+
+.dark p {
+color: #aaaaaa !important;
+}
+
+.dark .hero-subtitle {
+background-color: rgba(208, 122, 77, 0.15) !important;
+color: #e0a080 !important;
+}
+
+.dark .hero h1 span::after {
+background-color: rgba(208, 122, 77, 0.3) !important;
+}
+
+.dark .hero-stat-number {
+color: #d07a4d !important;
+}
+
+.dark .hero-stat-label {
+color: #aaaaaa !important;
+}
+
+/* 英雄区卡片样式 */
+.dark .hero-card {
+background-color: #1e1e1e !important;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark .hero-card-icon {
+background: rgba(208, 122, 77, 0.15) !important;
+color: #e0a080 !important;
+}
+
+.dark .hero-card-content h4 {
+color: #e0e0e0 !important;
+}
+
+.dark .hero-card-content p {
+color: #aaaaaa !important;
+}
+
+/* SVG连接线样式 */
+.dark svg path[stroke="rgba(240, 138, 93, 0.6)"] {
+stroke: rgba(208, 122, 77, 0.4) !important;
+}
+
+.dark svg circle[fill="rgba(240, 138, 93, 0.8)"] {
+fill: rgba(208, 122, 77, 0.6) !important;
+}
+
+.dark svg polygon[fill="rgba(240, 138, 93, 0.8)"] {
+fill: rgba(208, 122, 77, 0.6) !important;
+}
+
+/* 按钮样式 */
+.dark .btn-primary {
+background-color: #d07a4d !important;
+color: #e0e0e0 !important;
+box-shadow: 0 4px 15px rgba(208, 122, 77, 0.3) !important;
+}
+
+.dark .btn-primary:hover {
+background-color: #c06a3d !important;
+box-shadow: 0 6px 20px rgba(208, 122, 77, 0.4) !important;
+}
+
+.dark .btn-outline {
+border-color: #d07a4d !important;
+color: #e0a080 !important;
+}
+
+.dark .btn-outline:hover {
+background-color: #d07a4d !important;
+color: #e0e0e0 !important;
+}
+
+/* 夜间模式按钮样式 */
+.dark .btn-login {
+background-color: rgba(208, 122, 77, 0.15);
+color: var(--dark-primary-light);
+border-color: var(--dark-primary);
+}
+
+.dark .btn-login:hover {
+background-color: rgba(208, 122, 77, 0.25);
+}
+
+.dark .btn-register {
+background-color: var(--dark-primary);
+color: var(--dark-text);
+}
+
+.dark .btn-register:hover {
+background-color: #c06a3d;
+}
+
+.dark .btn-dark-mode {
+background: linear-gradient(135deg, #dfae66, #d07a4d);
+color: var(--dark-text);
+}
+
+/* 移动菜单样式 */
+.dark .nav-container.active {
+background-color: var(--dark-bg);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 确保夜间模式下的滚动条不刺眼 */
+.dark ::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+
+.dark ::-webkit-scrollbar-track {
+background: var(--dark-bg);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+background: var(--dark-border);
+border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+background: var(--dark-hover);
+}
+
+/* 顶部动画样式 */
+/* ===== 基础动画关键帧 ===== */
+
+/* 呼吸效果 - 用于卡片 */
+@keyframes breathe {
+0% {
+  transform: scale(1);
+}
+50% {
+  transform: scale(1.03);
+}
+100% {
+  transform: scale(1);
+}
+}
+
+/* 轻微呼吸效果 - 用于文字和小元素 */
+@keyframes breatheLight {
+0% {
+  transform: scale(1);
+}
+50% {
+  transform: scale(1.05);
+}
+100% {
+  transform: scale(1);
+}
+}
+
+/* 浮动效果 - 用于吉祥物 */
+@keyframes float {
+0% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-10px);
+}
+100% {
+  transform: translateY(0);
+}
+}
+
+/* 脉冲效果 - 用于强调元素 */
+@keyframes pulse {
+0% {
+  transform: scale(1);
+  opacity: 1;
+}
+50% {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+100% {
+  transform: scale(1);
+  opacity: 1;
+}
+}
+
+/* 添加顶部导航栏动画关键帧 */
+@keyframes slideInDown {
+0% {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+
+@keyframes fadeInDown {
+0% {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+
+/* 按钮波纹效果 */
+@keyframes ripple {
+0% {
+  transform: scale(0);
+  opacity: 0.5;
+}
+100% {
+  transform: scale(2);
+  opacity: 0;
+}
+}
+
+/* 按钮波纹效果 */
+.btn-ripple-effect {
+position: absolute;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.3);
+transform: scale(0);
+animation: ripple 0.6s linear;
+pointer-events: none;
+}
+
+/* 添加顶部导航栏元素的动画类 */
+.header-animate {
+animation: slideInDown 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.nav-item-animate {
+opacity: 0;
+animation: fadeInDown 0.5s ease-out forwards;
+}
+
+/* 确保动画不会影响布局 */
+header {
+will-change: transform, opacity;
+}
+
+.nav-links li,
+.logo-container,
+.nav-buttons {
+will-change: transform, opacity;
+}
+
+/* 添加页面加载时的过渡效果 */
+.page-transition {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: var(--light);
+z-index: 9999;
+opacity: 1;
+transition: opacity 0.8s ease-out;
+pointer-events: none;
+}
+
+.dark .page-transition {
+background-color: var(--dark-bg);
+}
+
+.page-transition.fade-out {
+opacity: 0;
+}
+
+/* 无障碍支持 */
+/* 减少动画选项 */
+.reduce-motion * {
+animation: none !important;
+transition: none !important;
+transform: none !important;
+}
+
+/* 支持系统级减少动画设置 */
+@media (prefers-reduced-motion: reduce) {
+* {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+.header-animate,
+.nav-item-animate,
+.hero-content > * {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.page-transition {
+  display: none !important;
+}
+}
+
+/* 滚动进度条样式 */
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 1000;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: var(--primary);
+  width: 0%;
+  transition: width 0.1s ease;
+  box-shadow: 0 2px 5px rgba(240, 138, 93, 0.3);
+}
+
+.dark .scroll-progress-bar {
+  background: var(--dark-primary);
+  box-shadow: 0 2px 5px rgba(208, 122, 77, 0.3);
+}
+
+/* 超小屏幕下的导航按钮优化 */
+@media (max-width: 480px) {
+  .nav-container.active .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  .nav-container.active .btn-nav {
+    width: 80%;
+    max-width: 200px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+  
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .dark-mode-switch {
+    width: 60px;
+    height: 34px;
+  }
+}
+
+/* 针对极小屏幕的额外优化 */
+@media (max-width: 360px) {
+  .nav-container.active .btn-nav {
+    width: 70%;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .dark-mode-switch {
+    width: 55px;
+    height: 32px;
+  }
+  
+  .sun, .moon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 顶部导航栏右侧控件容器 */
+.header-right-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 顶部导航栏中的夜间模式切换按钮 - 更紧凑的设计 */
+.header-dark-mode-switch {
+  display: none; /* 默认隐藏 */
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* 在小屏幕上显示顶部导航栏中的夜间模式切换按钮 */
+@media (max-width: 992px) {
+  .header-dark-mode-switch {
+    display: flex;
+  }
+  
+  /* 隐藏下拉菜单中的夜间模式切换按钮 */
+  .nav-container .dark-mode-switch {
+    display: none;
+  }
+  
+  /* 增大移动菜单按钮的点击区域 */
+  .mobile-menu-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+}
+
+/* 调整顶部导航栏中夜间模式切换按钮的样式 - 更小的内部元素 */
+.header-dark-mode-switch .sun,
+.header-dark-mode-switch .moon {
+  width: 16px;
+  height: 16px;
+}
+
+.header-dark-mode-switch .sun {
+  left: 8px;
+}
+
+.header-dark-mode-switch .moon {
+  right: 8px;
+}
+
+.header-dark-mode-switch .cloud {
+  width: 20px;
+  height: 10px;
+  top: 8px;
+  right: 10px;
+}
+
+.header-dark-mode-switch .cloud::before {
+  width: 10px;
+  height: 10px;
+  top: -5px;
+}
+
+.header-dark-mode-switch .cloud::after {
+  width: 8px;
+  height: 8px;
+  top: -3px;
+}
+
+/* 超小屏幕下进一步调整尺寸 */
+@media (max-width: 360px) {
+  .header-dark-mode-switch {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .header-dark-mode-switch .sun,
+  .header-dark-mode-switch .moon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .header-right-controls {
+    gap: 5px;
+  }
+}
+</style>
+
+{$head|raw|default=''}
+</head>
+
+<body>
+<!-- 页面滚动进度条 -->
+<div class="scroll-progress-container">
+  <div class="scroll-progress-bar"></div>
+</div>
+
+<!-- 添加页面加载过渡效果 -->
+<div class="page-transition"></div>
+
+<header class="header-animate">
+<div class="container">
+    <nav>
+        <a href="https://cloud.ogmiao.com" class="logo-container nav-item-animate" style="animation-delay: 0.3s; text-decoration: none;">
+            <img src="{$setting.web_view}/img/1.webp" alt="橘喵云logo" class="logo-img" width="36" height="36">
+            <div class="logo">橘喵云</div>
+        </a>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li class="nav-item-animate" style="animation-delay: 0.4s;"><a href="/" aria-current="page">首页</a></li>
+                <li class="nav-item-animate" style="animation-delay: 0.5s;"><a href="https://cloud.ogmiao.com/cart" aria-label="查看产品列表">产品服务</a></li>
+                <li class="nav-item-animate" style="animation-delay: 0.6s;"><a href="https://cloud.ogmiao.com/bt.html">宝塔面板</a></li>
+                <li class="nav-item-animate" style="animation-delay: 0.7s;"><a href="https://cloud.ogmiao.com/partner.html">合作伙伴</a></li>
+                <li class="nav-item-animate" style="animation-delay: 0.8s;"><a href="https://cloud.ogmiao.com/activity.html">活动中心</a></li>
+                <li class="nav-item-animate" style="animation-delay: 0.9s;"><a href="https://ogmiao.com">关于我们</a></li>
+                {$nav_links|raw|default=''}
+            </ul>
+            <div class="nav-buttons nav-item-animate" style="animation-delay: 0.8s;">
+                <a href="https://cloud.ogmiao.com/clientarea" class="btn-nav btn-login">用户中心</a>
+                <a href="https://cloud.ogmiao.com/register" class="btn-nav btn-register">注册</a>
+                
+<div id="dark-mode-toggle" class="dark-mode-switch" role="switch" aria-checked="false" aria-label="切换夜间模式" tabindex="0">
+    <div class="sun"></div>
+    <div class="cloud"></div>
+    <div class="moon"></div>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+</div>
+            </div>
+        </div>
+        <div class="header-right-controls">
+    <div id="header-dark-mode-toggle" class="dark-mode-switch header-dark-mode-switch" role="switch" aria-checked="false" aria-label="切换夜间模式" tabindex="0">
+        <div class="sun"></div>
+        <div class="cloud"></div>
+        <div class="moon"></div>
+        <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+    </div>
+    <button class="mobile-menu-btn nav-item-animate" style="animation-delay: 0.9s;" aria-expanded="false" aria-label="打开菜单">☰</button>
+</div>
+    </nav>
+</div>
+
+<!-- 顶部动画脚本 -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 页面加载过渡效果
+    const pageTransition = document.querySelector(".page-transition");
+    if (pageTransition) {
+        // 使用requestAnimationFrame优化动画
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                pageTransition.classList.add("fade-out");
+                // 使用transitionend事件而不是 setTimeout
+                pageTransition.addEventListener('transitionend', () => {
+                    pageTransition.remove();
+                }, { once: true });
+            }, 200);
+        });
+    }
+
+    // 移动菜单功能
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const navContainer = document.querySelector(".nav-container");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener("click", function(e) {
+            e.stopPropagation();
+            const isExpanded = navContainer.classList.contains("active");
+            navContainer.classList.toggle("active");
+            navLinks.classList.toggle("active");
+            this.classList.toggle("active");
+            this.textContent = this.classList.contains("active") ? "×" : "☰";
+            
+            // 更新ARIA属性
+            this.setAttribute("aria-expanded", !isExpanded);
+            
+            if (navContainer.classList.contains("active")) {
+                setTimeout(() => {
+                    document.addEventListener("click", closeMenuOnClickOutside);
+                }, 100);
+            } else {
+                document.removeEventListener("click", closeMenuOnClickOutside);
+            }
+        });
+    }
+
+    // 点击菜单外部关闭菜单
+    function closeMenuOnClickOutside(e) {
+        if (!navContainer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            navContainer.classList.remove("active");
+            navLinks.classList.remove("active");
+            mobileMenuBtn.classList.remove("active");
+            mobileMenuBtn.textContent = "☰";
+            document.removeEventListener("click", closeMenuOnClickOutside);
+        }
+    }
+
+    // 为按钮添加波纹效果
+    const allButtons = document.querySelectorAll("button, .btn, .btn-nav, a[class*='btn-']");
+    allButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // 创建波纹元素
+            const ripple = document.createElement('span');
+            ripple.classList.add('btn-ripple-effect');
+            
+            // 设置波纹位置
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = `${size}px`;
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            
+            // 确保按钮有相对定位
+            if (getComputedStyle(this).position === 'static') {
+                this.style.position = 'relative';
+            }
+            
+            // 确保按钮有溢出隐藏
+            this.style.overflow = 'hidden';
+            
+            // 添加波纹到按钮
+            this.appendChild(ripple);
+            
+            // 动画结束后移除波纹
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+        
+        // 添加按下效果
+        button.addEventListener('mousedown', function() {
+            this.style.transform = 'scale(0.97)';
+        });
+        
+        // 添加释放效果
+        button.addEventListener('mouseup', function() {
+            this.style.transform = '';
+        });
+        
+        // 确保鼠标离开时也恢复
+        button.addEventListener('mouseleave', function() {
+            if (this.style.transform === 'scale(0.97)') {
+                this.style.transform = '';
+            }
+        });
+    });
+
+    // 检查夜间模式设置
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+
+    // 检查本地存储中的夜间模式设置
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+
+    // 应用保存的设置
+    if (isDarkMode) {
+        body.classList.add("dark");
+        darkModeToggle.setAttribute("title", "切换到日间模式");
+    }
+
+    // 夜间模式切换
+const headerDarkModeToggle = document.getElementById("header-dark-mode-toggle");
+const darkModeToggles = [darkModeToggle, headerDarkModeToggle].filter(Boolean);
+
+darkModeToggles.forEach(toggle => {
+  if (toggle) {
+    // 初始化aria-pressed状态
+    toggle.setAttribute("aria-pressed", isDarkMode ? "true" : "false");
+    
+    toggle.addEventListener("click", function() {
+      // 切换夜间模式
+      body.classList.toggle("dark");
+      const isDarkNow = body.classList.contains("dark");
+      
+      // 更新按钮标题和本地存储
+      this.setAttribute("title", isDarkNow ? "切换到日间模式" : "切换到夜间模式");
+      this.setAttribute("aria-pressed", isDarkNow ? "true" : "false");
+      localStorage.setItem("darkMode", isDarkNow ? "true" : "false");
+      
+      // 创建过渡遮罩
+      const overlay = document.createElement("div");
+      overlay.className = "mode-transition-overlay";
+      document.body.appendChild(overlay);
+      
+      // 触发过渡动画
+      requestAnimationFrame(() => {
+          overlay.style.opacity = "0.3";
+          
+          // 完成过渡后移除遮罩
+          overlay.addEventListener('transitionend', () => {
+              overlay.style.opacity = "0";
+              overlay.addEventListener('transitionend', () => {
+                  overlay.remove();
+              }, { once: true });
+          }, { once: true });
+      });
+      
+      // 添加云朵飘动效果
+      if (isDarkNow) {
+          // 日间切换到夜间：云朵飘过
+          const cloud = this.querySelector(".cloud");
+          if (cloud) {
+              cloud.style.transform = "translateX(-150px)";
+              cloud.style.opacity = "0";
+          }
+          
+          // 应用改进的夜间模式
+          applyImprovedDarkMode();
+      } else {
+          // 夜间切换到日间：云朵飘回
+          const cloud = this.querySelector(".cloud");
+          if (cloud) {
+              // 先将云朵移到右侧外
+              cloud.style.transition = "none";
+              cloud.style.transform = "translateX(150px)";
+              cloud.style.opacity = "0";
+              
+              // 强制重绘
+              void cloud.offsetWidth;
+              
+              // 恢复过渡效果并飘入
+              cloud.style.transition = "all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+              setTimeout(() => {
+                  cloud.style.transform = "translateX(0)";
+                  cloud.style.opacity = "1";
+              }, 100);
+          }
+      }
+  });
+  
+  // 如果已经是夜间模式，应用改进的夜间模式
+  if (isDarkMode) {
+      applyImprovedDarkMode();
+  }
+}
+});
+
+// 如果已经是夜间模式，应用改进的夜间模式
+if (isDarkMode) {
+    applyImprovedDarkMode();
+}
+
+// 应用改进的夜间模式
+function applyImprovedDarkMode() {
+  // 检查是否已经有夜间模式样式表
+  let darkModeStyle = document.getElementById('improved-dark-mode-header');
+  
+  if (!darkModeStyle) {
+      // 创建新的样式表
+      darkModeStyle = document.createElement('style');
+      darkModeStyle.id = 'improved-dark-mode-header';
+      darkModeStyle.textContent = `
+        /* 改进的夜间模式 - 更深色背景和降低亮度 */
+        .dark {
+          background-color: #0a0a0a !important;
+          color: #d0d0d0 !important;
+        }
+        
+        /* 头部导航样式 */
+        .dark header {
+          background-color: #0a0a0a !important;
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4) !important;
+        }
+        
+        /* 导航链接 */
+        .dark .nav-links a {
+          color: #c0c0c0 !important;
+        }
+        
+        .dark .nav-links a:hover {
+          color: #b06a3d !important;
+          background-color: rgba(176, 106, 61, 0.1) !important;
+        }
+        
+        /* 导航按钮 */
+        .dark .btn-login {
+          background-color: rgba(176, 106, 61, 0.1) !important;
+          color: #c08060 !important;
+          border-color: #b06a3d !important;
+        }
+        
+        .dark .btn-register {
+          background-color: #b06a3d !important;
+          color: #d0d0d0 !important;
+          box-shadow: 0 4px 10px rgba(176, 106, 61, 0.3) !important;
+        }
+        
+        /* 图片亮度调整 */
+        .dark img {
+          filter: brightness(0.75) contrast(0.85) !important;
+        }
+        
+        /* 移动端菜单 */
+        .dark .nav-container.active {
+          background-color: #0a0a0a !important;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4) !important;
+        }
+        
+        /* 夜间模式切换按钮 */
+        .dark .dark-mode-switch {
+          background: linear-gradient(to bottom, #0a0a1a, #050508) !important;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+        }
+        
+        /* 滚动进度条 */
+        .dark .scroll-progress-bar {
+          background: #b06a3d !important;
+          box-shadow: 0 2px 5px rgba(176, 106, 61, 0.3) !important;
+        }
+      `;
+      
+      document.head.appendChild(darkModeStyle);
+  }
+}
+
+// 滚动进度条功能
+const scrollProgressBar = document.querySelector('.scroll-progress-bar');
+if (scrollProgressBar) {
+  window.addEventListener('scroll', function() {
+    // 计算滚动百分比
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    
+    // 更新进度条宽度
+    scrollProgressBar.style.width = scrollPercentage + '%';
+    
+    // 当滚动到顶部时隐藏进度条
+    if (scrollPercentage < 1) {
+      scrollProgressBar.style.opacity = '0';
+    } else {
+      scrollProgressBar.style.opacity = '1';
+    }
+  });
+}
+});
+</script>
+</header>
+
