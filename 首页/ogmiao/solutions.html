@@ -1,0 +1,1238 @@
+{include file="common/header" /}
+
+<style>
+    /* 解决方案页面样式 */
+    .solutions-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+    }
+
+    /* 英雄区域 */
+    .solutions-hero {
+        position: relative;
+        padding: 80px 0;
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=800&width=1600');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 60px;
+    }
+
+    .dark .solutions-hero {
+        background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=800&width=1600');
+    }
+
+    .solutions-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            linear-gradient(rgba(240, 138, 93, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(240, 138, 93, 0.05) 1px, transparent 1px);
+        background-size: 20px 20px;
+        z-index: 1;
+    }
+
+    .dark .solutions-hero::before {
+        background-image: 
+            linear-gradient(rgba(208, 122, 77, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(208, 122, 77, 0.05) 1px, transparent 1px);
+    }
+
+    .solutions-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .solutions-hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+        position: relative;
+        display: inline-block;
+    }
+
+    .dark .solutions-hero h1 {
+        color: var(--dark-primary);
+    }
+
+    .solutions-hero p {
+        font-size: 1.2rem;
+        color: var(--gray);
+        margin-bottom: 2rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .dark .solutions-hero p {
+        color: var(--dark-text-secondary);
+    }
+
+    /* 行业导航 */
+    .industry-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 50px;
+        position: sticky;
+        top: 80px;
+        background-color: var(--light);
+        padding: 15px;
+        border-radius: 10px;
+        z-index: 10;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .dark .industry-nav {
+        background-color: var(--dark-card-bg);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .industry-nav-item {
+        padding: 8px 15px;
+        border-radius: 30px;
+        background-color: var(--gray-light);
+        color: var(--dark);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .dark .industry-nav-item {
+        background-color: #1a1a1a;
+        color: var(--dark-text);
+    }
+
+    .industry-nav-item:hover, .industry-nav-item.active {
+        background-color: var(--primary);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(240, 138, 93, 0.3);
+    }
+
+    .dark .industry-nav-item:hover, .dark .industry-nav-item.active {
+        background-color: var(--dark-primary);
+        box-shadow: 0 5px 15px rgba(208, 122, 77, 0.3);
+    }
+
+    /* 行业卡片网格 */
+    .industry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .industry-card {
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .dark .industry-card {
+        background-color: var(--dark-card-bg);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .industry-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .industry-card:hover {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .industry-card-img {
+        height: 180px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .industry-card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+    }
+
+    .industry-card-title {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .industry-card-content {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .industry-card-description {
+        color: var(--gray);
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+
+    .dark .industry-card-description {
+        color: var(--dark-text-secondary);
+    }
+
+    .industry-card-link {
+        display: inline-flex;
+        align-items: center;
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        margin-top: auto;
+    }
+
+    .dark .industry-card-link {
+        color: var(--dark-primary);
+    }
+
+    .industry-card-link span {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .industry-card-link:hover span {
+        transform: translateX(5px);
+    }
+
+    /* 行业详情部分 */
+    .industry-section {
+        margin-bottom: 80px;
+        scroll-margin-top: 150px;
+    }
+
+    .industry-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(240, 138, 93, 0.2);
+    }
+
+    .dark .industry-header {
+        border-bottom-color: rgba(208, 122, 77, 0.2);
+    }
+
+    .industry-icon {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(240, 138, 93, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-right: 20px;
+        color: var(--primary);
+    }
+
+    .dark .industry-icon {
+        background-color: rgba(208, 122, 77, 0.15);
+        color: var(--dark-primary);
+    }
+
+    .industry-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin: 0;
+    }
+
+    .dark .industry-title {
+        color: var(--dark-primary);
+    }
+
+    .industry-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .industry-challenges, .industry-solutions {
+        background-color: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .dark .industry-challenges, .dark .industry-solutions {
+        background-color: var(--dark-card-bg);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .industry-subtitle {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--dark);
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .industry-subtitle {
+        color: var(--dark-text);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .industry-list {
+        padding-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .industry-list li {
+        margin-bottom: 10px;
+        color: var(--gray);
+    }
+
+    .dark .industry-list li {
+        color: var(--dark-text-secondary);
+    }
+
+    .industry-advantages {
+        margin-top: 30px;
+    }
+
+    .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .advantage-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border-top: 3px solid var(--primary);
+    }
+
+    .dark .advantage-card {
+        background-color: var(--dark-card-bg);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border-top-color: var(--dark-primary);
+    }
+
+    .advantage-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .advantage-card:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .advantage-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--dark);
+        margin-top: 0;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .dark .advantage-title {
+        color: var(--dark-text);
+    }
+
+    .advantage-title::before {
+        content: "✓";
+        margin-right: 10px;
+        color: var(--primary);
+        font-weight: bold;
+    }
+
+    .dark .advantage-title::before {
+        color: var(--dark-primary);
+    }
+
+    .advantage-description {
+        color: var(--gray);
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .dark .advantage-description {
+        color: var(--dark-text-secondary);
+    }
+
+    /* 应用场景部分 */
+    .scenarios-section {
+        margin-top: 40px;
+    }
+
+    .scenarios-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    .scenario-card {
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    .dark .scenario-card {
+        background-color: var(--dark-card-bg);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .scenario-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .scenario-card:hover {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .scenario-img {
+        height: 160px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .scenario-content {
+        padding: 20px;
+    }
+
+    .scenario-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--dark);
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .dark .scenario-title {
+        color: var(--dark-text);
+    }
+
+    .scenario-description {
+        color: var(--gray);
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .dark .scenario-description {
+        color: var(--dark-text-secondary);
+    }
+
+    /* 成功案例部分 */
+    .case-studies-section {
+        margin-top: 40px;
+    }
+
+    .case-study-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--primary);
+    }
+
+    .dark .case-study-card {
+        background-color: var(--dark-card-bg);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        border-left-color: var(--dark-primary);
+    }
+
+    .case-study-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .case-study-card:hover {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .case-study-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--dark);
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .dark .case-study-title {
+        color: var(--dark-text);
+    }
+
+    .case-study-description {
+        color: var(--gray);
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .dark .case-study-description {
+        color: var(--dark-text-secondary);
+    }
+
+    .case-study-results {
+        background-color: rgba(240, 138, 93, 0.05);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+
+    .dark .case-study-results {
+        background-color: rgba(208, 122, 77, 0.1);
+    }
+
+    .case-study-results-title {
+        font-weight: 600;
+        color: var(--primary);
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .dark .case-study-results-title {
+        color: var(--dark-primary);
+    }
+
+    .case-study-results-list {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .case-study-results-list li {
+        margin-bottom: 5px;
+        color: var(--gray);
+    }
+
+    .dark .case-study-results-list li {
+        color: var(--dark-text-secondary);
+    }
+
+    /* 联系我们部分 */
+    .contact-section {
+        background-color: white;
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        margin-top: 60px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .dark .contact-section {
+        background-color: var(--dark-card-bg);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--bg-gradient);
+    }
+
+    .contact-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .dark .contact-title {
+        color: var(--dark-primary);
+    }
+
+    .contact-description {
+        color: var(--gray);
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .dark .contact-description {
+        color: var(--dark-text-secondary);
+    }
+
+    .contact-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(240, 138, 93, 0.3);
+    }
+
+    .dark .contact-btn {
+        background-color: var(--dark-primary);
+        box-shadow: 0 5px 15px rgba(208, 122, 77, 0.3);
+    }
+
+    .contact-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(240, 138, 93, 0.4);
+    }
+
+    .dark .contact-btn:hover {
+        box-shadow: 0 10px 25px rgba(208, 122, 77, 0.4);
+    }
+
+    /* 响应式调整 */
+    @media (max-width: 992px) {
+        .solutions-hero {
+            padding: 60px 0;
+        }
+
+        .solutions-hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .solutions-hero p {
+            font-size: 1.1rem;
+        }
+
+        .industry-content {
+            grid-template-columns: 1fr;
+        }
+
+        .industry-title {
+            font-size: 2rem;
+        }
+
+        .industry-nav {
+            overflow-x: auto;
+            justify-content: flex-start;
+            padding-bottom: 5px;
+        }
+
+        .industry-nav::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .industry-nav::-webkit-scrollbar-thumb {
+            background-color: rgba(240, 138, 93, 0.3);
+            border-radius: 5px;
+        }
+
+        .dark .industry-nav::-webkit-scrollbar-thumb {
+            background-color: rgba(208, 122, 77, 0.3);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .solutions-hero {
+            padding: 40px 0;
+        }
+
+        .solutions-hero h1 {
+            font-size: 2rem;
+        }
+
+        .solutions-hero p {
+            font-size: 1rem;
+        }
+
+        .industry-grid {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        .industry-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .industry-icon {
+            margin-bottom: 15px;
+        }
+
+        .industry-title {
+            font-size: 1.8rem;
+        }
+
+        .advantages-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .scenarios-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-section {
+            padding: 30px 20px;
+        }
+
+        .contact-title {
+            font-size: 1.8rem;
+        }
+
+        .contact-description {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .solutions-hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .industry-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .industry-title {
+            font-size: 1.6rem;
+        }
+
+        .industry-subtitle {
+            font-size: 1.3rem;
+        }
+
+        .contact-title {
+            font-size: 1.6rem;
+        }
+    }
+</style>
+
+<div class="solutions-container">
+    <!-- 英雄区域 -->
+    <div class="solutions-hero">
+        <div class="solutions-hero-content">
+            <h1>行业解决方案</h1>
+            <p>橘喵云为各行各业提供定制化的云服务解决方案，助力企业数字化转型，提升业务效率，创造更大价值。</p>
+        </div>
+    </div>
+
+    <!-- 行业导航 -->
+    <div class="industry-nav">
+        <a href="#finance" class="industry-nav-item">金融</a>
+        <a href="#healthcare" class="industry-nav-item">医疗</a>
+        <a href="#tourism" class="industry-nav-item">文旅</a>
+        <a href="#automotive" class="industry-nav-item">汽车出行</a>
+        <a href="#education" class="industry-nav-item">教育</a>
+        <a href="#media" class="industry-nav-item">传媒</a>
+        <a href="#logistics" class="industry-nav-item">交通物流</a>
+        <a href="#gaming" class="industry-nav-item">游戏</a>
+        <a href="#internet" class="industry-nav-item">互联网</a>
+        <a href="#manufacturing" class="industry-nav-item">制造</a>
+        <a href="#government" class="industry-nav-item">政务</a>
+        <a href="#smart-devices" class="industry-nav-item">智能终端</a>
+        <a href="#real-estate" class="industry-nav-item">建筑与不动产</a>
+        <a href="#audio-video" class="industry-nav-item">音视频</a>
+        <a href="#retail" class="industry-nav-item">零售</a>
+    </div>
+
+    <!-- 行业卡片网格 -->
+    <div class="industry-grid">
+        <!-- 金融 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">金融解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为金融机构提供高安全性、高可用性的云服务解决方案，满足监管合规要求，保障业务连续性，支持金融创新。</p>
+                <a href="#finance" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 医疗 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">医疗解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为医疗机构提供符合行业标准的云服务解决方案，保障患者数据安全，提升医疗服务效率，支持远程医疗和智慧医院建设。</p>
+                <a href="#healthcare" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 文旅 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">文旅解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为文化旅游行业提供智能化云服务解决方案，优化游客体验，提升景区管理效率，助力文旅产业数字化转型。</p>
+                <a href="#tourism" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 汽车出行 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">汽车出行解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为汽车和出行行业提供高性能云服务解决方案，支持智能网联汽车、自动驾驶和共享出行等创新业务，提升用户出行体验。</p>
+                <a href="#automotive" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 教育 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">教育解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为教育机构提供稳定可靠的云服务解决方案，支持在线教育、智慧校园建设和教育资源共享，提升教学质量和管理效率。</p>
+                <a href="#education" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 传媒 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">传媒解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为传媒行业提供高性能、高弹性的云服务解决方案，支持内容制作、分发和存储，满足高并发访问需求，助力数字内容产业发展。</p>
+                <a href="#media" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 交通物流 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">交通物流解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为交通物流行业提供智能化云服务解决方案，优化运输路线，提升仓储管理效率，实现全链路可视化，降低运营成本。</p>
+                <a href="#logistics" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 游戏 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">游戏解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为游戏行业提供高性能、低延迟的云服务解决方案，支持游戏开发、运营和分发，提升玩家体验，降低运营成本。</p>
+                <a href="#gaming" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 互联网 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">互联网解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为互联网企业提供高弹性、高可扩展的云服务解决方案，支持快速业务迭代，应对流量波动，保障服务稳定性。</p>
+                <a href="#internet" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 制造 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">制造解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为制造业提供智能化云服务解决方案，支持工业互联网、智能制造和供应链管理，提升生产效率，降低运营成本。</p>
+                <a href="#manufacturing" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 政务 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">政务解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为政府机构提供安全可靠的云服务解决方案，支持政务数据共享、业务协同和公共服务创新，提升政务服务效率和质量。</p>
+                <a href="#government" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 智能终端 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">智能终端解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为智能终端行业提供高性能云服务解决方案，支持设备互联、数据同步和远程管理，提升用户体验，加速产品创新。</p>
+                <a href="#smart-devices" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 建筑与不动产 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">建筑与不动产解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为建筑和不动产行业提供智能化云服务解决方案，支持BIM应用、智慧建造和智能楼宇管理，提升建设和运营效率。</p>
+                <a href="#real-estate" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 音视频 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">音视频解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为音视频行业提供高性能、低延迟的云服务解决方案，支持内容制作、分发和存储，提升用户观看体验，降低带宽成本。</p>
+                <a href="#audio-video" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+
+        <!-- 零售 -->
+        <div class="industry-card">
+            <div class="industry-card-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+                <div class="industry-card-overlay">
+                    <h3 class="industry-card-title">零售解决方案</h3>
+                </div>
+            </div>
+            <div class="industry-card-content">
+                <p class="industry-card-description">为零售行业提供智能化云服务解决方案，支持全渠道销售、智能库存管理和个性化营销，提升购物体验，增加销售额。</p>
+                <a href="#retail" class="industry-card-link">了解更多 <span>→</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 行业详情部分 -->
+    <!-- 金融 -->
+    <div id="finance" class="industry-section">
+        <div class="industry-header">
+            <div class="industry-icon">💰</div>
+            <h2 class="industry-title">金融解决方案</h2>
+        </div>
+        <div class="industry-content">
+            <div class="industry-challenges">
+                <h3 class="industry-subtitle">行业挑战</h3>
+                <ul class="industry-list">
+                    <li>金融数据安全与合规要求高</li>
+                    <li>业务连续性要求高，不容许服务中断</li>
+                    <li>交易峰值处理能力要求高</li>
+                    <li>金融科技创新需求与传统IT架构冲突</li>
+                    <li>数据分析和风控能力需要提升</li>
+                </ul>
+            </div>
+            <div class="industry-solutions">
+                <h3 class="industry-subtitle">解决方案</h3>
+                <ul class="industry-list">
+                    <li>提供符合金融行业监管要求的专属云服务</li>
+                    <li>多区域容灾备份，确保业务连续性</li>
+                    <li>弹性计算资源，应对交易峰值</li>
+                    <li>金融级安全防护，保障数据安全</li>
+                    <li>大数据分析平台，提升风控能力</li>
+                    <li>混合云架构，支持金融科技创新</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="industry-advantages">
+            <h3 class="industry-subtitle">核心优势</h3>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <h4 class="advantage-title">金融级安全保障</h4>
+                    <p class="advantage-description">多层次安全防护，满足监管合规要求，保障金融数据安全。</p>
+                </div>
+                <div class="advantage-card">
+                    <h4 class="advantage-title">高可用架构</h4>
+                    <p class="advantage-description">99.99%服务可用性，多区域容灾备份，确保业务连续性。</p>
+                </div>
+                <div class="advantage-card">
+                    <h4 class="advantage-title">弹性扩展能力</h4>
+                    <p class="advantage-description">根据业务需求自动扩展资源，应对交易峰值，降低成本。</p>
+                </div>
+                <div class="advantage-card">
+                    <h4 class="advantage-title">金融科技支持</h4>
+                    <p class="advantage-description">支持区块链、大数据、人工智能等金融科技创新应用。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scenarios-section">
+            <h3 class="industry-subtitle">应用场景</h3>
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <div class="scenario-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                    <div class="scenario-content">
+                        <h4 class="scenario-title">核心交易系统</h4>
+                        <p class="scenario-description">为银行、证券、保险等金融机构提供高性能、高可用的核心交易系统云服务，保障业务连续性。</p>
+                    </div>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                    <div class="scenario-content">
+                        <h4 class="scenario-title">风控系统</h4>
+                        <p class="scenario-description">基于大数据和人工智能技术，提供实时风险监控和分析，提升风险管理能力。</p>
+                    </div>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                    <div class="scenario-content">
+                        <h4 class="scenario-title">金融科技创新</h4>
+                        <p class="scenario-description">支持区块链、大数据、人工智能等金融科技创新应用，加速金融服务创新。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-studies-section">
+            <h3 class="industry-subtitle">成功案例</h3>
+            <div class="case-study-card">
+                <h4 class="case-study-title">某大型商业银行核心系统云化</h4>
+                <p class="case-study-description">为某大型商业银行提供专属金融云服务，支持核心交易系统云化，提升系统性能和可靠性，降低运维成本。</p>
+                <div class="case-study-results">
+                    <h5 class="case-study-results-title">客户收益</h5>
+                    <ul class="case-study-results-list">
+                        <li>系统性能提升50%，交易处理能力显著增强</li>
+                        <li>服务可用性达到99.99%，确保业务连续性</li>
+                        <li>IT运维成本降低30%，资源利用率提升</li>
+                        <li>支持业务快速创新，缩短新业务上线时间</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 医疗 -->
+    <div id="healthcare" class="industry-section">
+        <div class="industry-header">
+            <div class="industry-icon">🏥</div>
+            <h2 class="industry-title">医疗解决方案</h2>
+        </div>
+        <div class="industry-content">
+            <div class="industry-challenges">
+                <h3 class="industry-subtitle">行业挑战</h3>
+                <ul class="industry-list">
+                    <li>医疗数据安全与患者隐私保护</li>
+                    <li>医疗信息系统互联互通难题</li>
+                    <li>医疗资源分配不均衡</li>
+                    <li>医疗服务效率和质量需提升</li>
+                    <li>医疗成本持续上升</li>
+                </ul>
+            </div>
+            <div class="industry-solutions">
+                <h3 class="industry-subtitle">解决方案</h3>
+                <ul class="industry-list">
+                    <li>符合医疗行业标准的云服务平台</li>
+                    <li>医疗数据安全存储与共享服务</li>
+                    <li>远程医疗和移动医疗支持</li>
+                    <li>医疗影像云存储与处理</li>
+                    <li>医院信息系统云化服务</li>
+                    <li>医疗大数据分析平台</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="industry-advantages">
+            <h3 class="industry-subtitle">核心优势</h3>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <h4 class="advantage-title">医疗数据安全</h4>
+                    <p class="advantage-description">符合医疗行业标准的数据安全保障，保护患者隐私。</p>
+                </div>
+                <div class="advantage-card">
+                    <h4 class="advantage-title">系统互联互通</h4>
+                    <p class="advantage-description">支持医疗信息系统互联互通，实现数据共享和业务协同。</p>
+                </div>
+                <div class="advantage-card">
+                    <h4 class="advantage-title">远程医疗支持</h4>
+                    <p class="advantage-description">提供高质量视频会议和数据传输服务，支持远程医疗。</p>
+                </div>
+                <div class="advantage-card">
+                    <h4 class="advantage-title">医疗大数据</h4>
+                    <p class="advantage-description">支持医疗大数据分析，辅助临床决策和医学研究。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scenarios-section">
+            <h3 class="industry-subtitle">应用场景</h3>
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <div class="scenario-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                    <div class="scenario-content">
+                        <h4 class="scenario-title">智慧医院</h4>
+                        <p class="scenario-description">支持医院信息系统云化，实现医疗服务流程优化，提升医疗服务质量和效率。</p>
+                    </div>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                    <div class="scenario-content">
+                        <h4 class="scenario-title">远程医疗</h4>
+                        <p class="scenario-description">提供高质量视频会议和数据传输服务，支持远程会诊、远程监护和远程教育。</p>
+                    </div>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-img" style="background-image: url('https://cloud.ogmiao.com/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                    <div class="scenario-content">
+                        <h4 class="scenario-title">医疗影像云</h4>
+                        <p class="scenario-description">提供医疗影像存储、处理和分析服务，支持影像数据共享和AI辅助诊断。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-studies-section">
+            <h3 class="industry-subtitle">成功案例</h3>
+            <div class="case-study-card">
+                <h4 class="case-study-title">某三甲医院智慧医疗平台建设</h4>
+                <p class="case-study-description">为某三甲医院提供智慧医疗云平台，支持医院信息系统云化、医疗影像云存储和远程医疗服务，提升医疗服务质量和效率。</p>
+                <div class="case-study-results">
+                    <h5 class="case-study-results-title">客户收益</h5>
+                    <ul class="case-study-results-list">
+                        <li>医疗服务效率提升40%，患者等待时间缩短</li>
+                        <li>医疗数据共享率提升80%，支持临床决策</li>
+                        <li>IT运维成本降低35%，资源利用率提升</li>
+                        <li>远程医疗服务覆盖周边10个县级医院，提升基层医疗水平</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 其他行业解决方案可以按照类似结构继续添加 -->
+    <!-- 为了简洁，这里只展示了金融和医疗两个行业的详细解决方案 -->
+    <!-- 实际应用中，可以为每个行业创建类似的详细内容 -->
+
+    <!-- 联系我们部分 -->
+    <div class="contact-section">
+        <h2 class="contact-title">需要定制化解决方案？</h2>
+        <p class="contact-description">我们的专业团队将根据您的业务需求，为您量身定制最适合的云服务解决方案。</p>
+        <a href="#" class="contact-btn">联系我们</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 导航菜单激活状态
+        const navItems = document.querySelectorAll('.industry-nav-item');
+        const sections = document.querySelectorAll('.industry-section');
+        
+        // 滚动监听
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').substring(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // 平滑滚动
+        navItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 150,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 行业卡片链接平滑滚动
+        const cardLinks = document.querySelectorAll('.industry-card-link');
+        cardLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 150,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+</script>
+
+{include file="common/footer" /}
+
