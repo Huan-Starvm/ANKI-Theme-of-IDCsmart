@@ -128,4 +128,4 @@ cd OGMIA-Theme-of-IDCsmart
 ### 🎭 加入我们的欢乐社群
 
 - 🐱 橘喵云交流一群：[点击加入](https://qm.qq.com/cgi-bin/qm/qr?k=-ae9KE_6u7E7tNZdjOP5dpHZenqQNWP9&jump_from=webapi&authKey=TLvq+VSp0RoeDv0JittEDYFaKKmshpy4Z89xJdL/xDhYHsofgKowdhuW5gQlvZwG)  
-- 🐱 橘喵云交流二群：[点击加入](https://qm.qq.com/cgi-bin/qm/qr?k=Ndl5dgR-vYS3
+- 🐱 橘喵云交流二群：[点击加入](https://qm.qq.com/cgi-bin/qm/qr?k=Ndl5dgR-vYS3NbWUeh6r3iS1pO9rWbrx&jump_from=webapi&authKey=DgUh/PS829t9pwdJK3x9/9ZhAgfATlbuD+OT2ywq3whi/iBoPHPLlV1cG6HXvcy+)
