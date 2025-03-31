@@ -33,7 +33,18 @@
 🎯 活动中心 | 丰富的营销活动展示  
 📜 隐私政策 | 详细的用户隐私保护说明  
 📋 服务条款 | 完整的服务协议与条款  
-💡 解决方案 | 专业的业务解决方案展示
+💡 解决方案 | 专业的业务解决方案展示  
+🚫 404页面 | 自定义错误页面展示
+
+### ⚙️ 404页面配置说明
+
+> 📝 **404页面设置步骤**：
+> 1. 删除魔方财务根目录下的`404.html`文件
+> 2. 系统将自动使用主题模板中的404页面
+> 
+> ⚠️ **注意事项**：
+> - 确保主题模板中已包含自定义的404页面设计
+> - 可以通过修改模板文件自定义404页面样式
 
 ### 🛒 购物车功能
 
@@ -66,65 +77,3 @@
 <p align="center">
   <img src="https://cloud.ogmiao.com/themes/web/ogmiao/img/index.png" alt="首页预览" width="800" />
 </p>
-
-### 📊 性能报告
-
-<p align="center">
-  <img src="https://cloud.ogmiao.com/themes/web/ogmiao/img/lighthouse.png" alt="Lighthouse测试评分" width="800" />
-</p>
-
-## 📅 未来计划
-
-- 👤 **用户中心升级** - 全新的用户界面设计，提供更多个性化功能  
-- ⚙️ **首页配置系统** - 开发可视化配置工具，轻松管理首页内容和样式  
-
-## 🚀 开发者天地
-
-### ✨ 参与贡献
-
-🎯 发现Bug | 来提 Issue 吧！让我们一起抓虫子  
-🌟 有想法 | Pull Request 随时欢迎  
-📚 写文档 | 分享经验帮助他人  
-🌈 译制化 | 让主题走向世界  
-
-### 🎮 快速上手指南
-
-```bash
-# 🔥 Clone 主题源码
-git clone https://github.com/DYMTHH/OGMIA-Theme-of-IDCsmart.git
-
-# 🏃‍♂️ 冲进项目目录
-cd OGMIA-Theme-of-IDCsmart
-
-# 📦 安装指引
-# 🏠 首页模板 -> /public/themes/web
-# 🛍️ 购物车模板 -> /public/themes/cart
-
-# 🎨 开发流程 
-# 1. ✍️ 修改代码，放飞创意
-# 2. 🔍 测试，确保完美运行
-# 3. 🎉 提交PR，等待合并
-```
-
-## 🌟 二次开发致谢
-
-> 💝 我们欢迎并感谢所有二次开发的作者！每一份贡献都让这个主题变得更好！
-
-### 🏆 优秀作者名录
-
-| 作者 | 仓库链接 | 主要贡献 |
-|------|----------|----------|
-| @无 | [无](#) | 无 |
-
-> 🎉 **欢迎二次开发**：我们非常支持开发者对主题进行优化和改进！如果你有新的想法：  
-> - 🔄 可以自由进行二次开发  
-> - 📢 建议将成果开源出来  
-> - 📝 提交PR将你添加到作者名录  
-> - 🤝 一起维护这个主题生态  
-
-## 🌈 交流与支持
-
-### 🎭 加入我们的欢乐社群
-
-- 🐱 橘喵云交流一群：[点击加入](https://qm.qq.com/cgi-bin/qm/qr?k=-ae9KE_6u7E7tNZdjOP5dpHZenqQNWP9&jump_from=webapi&authKey=TLvq+VSp0RoeDv0JittEDYFaKKmshpy4Z89xJdL/xDhYHsofgKowdhuW5gQlvZwG)  
-- 🐱 橘喵云交流二群：[点击加入](https://qm.qq.com/cgi-bin/qm/qr?k=Ndl5dgR-vYS3NbWUeh6r3iS1pO9rWbrx&jump_from=webapi&authKey=DgUh/PS829t9pwdJK3x9/9ZhAgfATlbuD+OT2ywq3whi/iBoPHPLlV1cG6HXvcy+)
