@@ -161,9 +161,9 @@ cd OGMIA-Theme-of-IDCsmart
 
 ### 🏆 优秀二开作者名录
 
-| 作者 | 仓库链接 | 主要贡献 |
-|------|----------|----------|
-| @Huan-Starvm | [idcsmart-ogmiao-clientarea](https://github.com/Huan-Starvm/idcsmart-ogmiao-clientarea) | 用户中心优化 |
+- **@Huan-Starvm**  
+  - 仓库链接：[idcsmart-ogmiao-clientarea](https://github.com/Huan-Starvm/idcsmart-ogmiao-clientarea)  
+  - 主要贡献：用户中心优化  
 
 > 🎉 **欢迎二次开发**：我们非常支持开发者对主题进行优化和改进！如果你有新的想法：  
 > - 🔄 可以自由进行二次开发  
