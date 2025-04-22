@@ -79,8 +79,7 @@
 <details>
 <summary>点击展开查看配置图片（该配置显示了CN国旗并展开商品介绍还显示了热门标签）</summary>
 <p align="center">
-  <img src="![image](https://cloud.ogmiao.com/cartpz.png)
-" alt="购物车配置图片" width="800" />
+<img width="646" alt="cartpz" src="https://github.com/user-attachments/assets/6700fce6-ac64-4a8b-ada0-4ab3632c3653" />
 </p>
 </details>
 
@@ -96,25 +95,21 @@
 <details>
 <summary>首页</summary>
 <p align="center">
-  <img src="[image](https://cloud.ogmiao.com/web.jpeg)
-" alt="用户中心图片")
-" alt="用户中心图片" width="800" />
+![web](https://github.com/user-attachments/assets/7ed99537-2d50-4dce-ba9f-ae468ff11455)
 </p>
 </details>
 
 <details>
 <summary>用户中心</summary>
 <p align="center">
-  <img src="![image](https://cloud.ogmiao.com/clientarea.jpeg)
-" alt="用户中心图片" width="800" />
+![clientarea](https://github.com/user-attachments/assets/8b9d64b6-d605-4c63-9258-3d8652e43751)
 </p>
 </details>
 
 <details>
 <summary>购物车</summary>
 <p align="center">
-  <img src="![image](https://cloud.ogmiao.com/cart.jpeg)
-" alt="购物车图片" width="800" />
+![cart](https://github.com/user-attachments/assets/ac13aea7-5543-408a-9ee8-8892c7ceb443)
 </p>
 </details>
 
