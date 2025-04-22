@@ -2,21 +2,25 @@
 <img src="https://cloud.ogmiao.com/themes/web/ogmiao/img/2.webp" alt="橘喵云LOGO" width="600" />
 </p>
 
-<div align="center">
----
-</div>
 
 ## 🐱 项目介绍
 
-喵～欢迎来到OGMIA主题！这是一个为IDCsmart魔方财务设计的超级可爱的主题，它能让你的IDCsmart魔方财务界面焕然一新。就像猫咪一样优雅又吸引人！
+感谢您使用OGMIAO主题！这是一个为IDCsmart魔方财务设计，它能让你的IDCsmart魔方财务界面焕然一新
 
 ---
 
-## 🏆 项目数据
+## 📦 安装方式
 
-[![⭐ 收藏数量](https://img.shields.io/github/stars/DYMTHH/OGMIA-Theme-of-IDCsmart?style=for-the-badge&color=pink&label=收藏数量)](https://github.com/DYMTHH/OGMIA-Theme-of-IDCsmart/stargazers)  
-[![📥 下载次数](https://img.shields.io/github/downloads/DYMTHH/OGMIA-Theme-of-IDCsmart/total?style=for-the-badge&color=purple&label=下载次数)](https://github.com/DYMTHH/OGMIA-Theme-of-IDCsmart/releases)  
-[![📜 开源协议](https://img.shields.io/github/license/DYMTHH/OGMIA-Theme-of-IDCsmart?style=for-the-badge&color=orange&label=开源协议)](https://github.com/DYMTHH/OGMIA-Theme-of-IDCsmart/blob/main/LICENSE)
+```bash
+# 🐾 下载主题压缩包
+# 🚀 将压缩包上传至 魔方财务/public/themes/ 对应目录
+# web.zip-> web
+# cart.zip-> cart
+# clientarea.zip-> clientarea
+# 📂 解压文件，确保文件结构正确
+# ✅ 在管理后台启用主题
+# ‼️使用首页模板，请将魔方财务/public文件夹中404.html删除，自动使用web模板中的404定制页面
+```
 
 ---
 
@@ -29,129 +33,88 @@
 
 ---
 
-## 📦 安装方式
-
-```bash
-# 🐾 下载主题压缩包
-# 🚀 将压缩包上传至 /public/themes/web 目录
-# 📂 解压文件，确保文件结构正确
-# ✅ 在管理后台启用主题
-```
-
----
-
 ## 📋 功能清单
 
 ### 🏠 首页模板系列
 
-💻 **主页面** | 清新简约的企业门户首页  
-🔧 **宝塔面板** | 简化的服务器管理界面  
-🤝 **合作伙伴** | 展示合作伙伴与品牌联盟  
-🎯 **活动中心** | 丰富的营销活动展示  
-📜 **隐私政策** | 详细的用户隐私保护说明  
-📋 **服务条款** | 完整的服务协议与条款  
-💡 **解决方案** | 专业的业务解决方案展示  
-🚫 **404页面** | 自定义错误页面展示  
+- 💻 **主页面** | 清新简约的企业门户首页
+- 🔧 **宝塔面板** | 快速获取宝塔合作页面
+- 🤝 **合作伙伴** | 展示如何成为合作伙伴与优秀品牌联盟
+- 🎯 **活动中心** | 丰富的营销活动展示
+- 📜 **隐私政策** | 详细的用户隐私保护说明
+- 📋 **服务条款** | 完整的服务协议与条款 
+- 💡 **解决方案** | 专业的业务解决方案展示
+- 🚫 **404页面** | 自定义错误页面展示
 
----
+### 🛒 购物车模板
 
-### ⚙️ 404页面配置说明
+- 🎯 **瀑布流展示** | 响应式自适应布局  
+- 📦 **详情展开** | 支持单击展开/收起  
+- 🌍 **地区标识** | 商品地区可视化展示
+- 🏷️ **分类标签** | 商品左上角支持显示标签
 
-> 📝 **404页面设置步骤**：  
-> 1. 🗑️ 删除魔方财务根目录下的`404.html`文件  
-> 2. 🖼️ 系统将自动使用主题模板中的404页面  
-> 
-> ⚠️ **注意事项**：  
-> - 确保主题模板中已包含自定义的404页面设计  
-> - 可以通过修改模板文件自定义404页面样式  
+**📝 购物车配置说明**：
 
----
+**设置说明：**  
+> 1. 国旗展示
+> - 魔方提供了各国国旗图片路径：/public/upload/common/country
+> - 您可以在分类名称前（支持一，二级分类）增加：国家代号*
+> - 示例：CN*香港服务器
 
-### 🛒 购物车功能
+> 2. 下方分类展开
+> - 您可以在分类名称后（支持一，二级分类）增加： * yes/no（这里不应该留空白，只是因为md文件**让文字变成斜字了）
+> - yes为展开，no为不展开
+> - 示例：香港服务器*yes/no
 
-🎯 **瀑布流展示** | 响应式自适应布局  
-📦 **详情展开** | 支持单击展开/收起  
-🌍 **地区标识** | 商品地区可视化展示  
+**⚠️特别注意⚠️：**
+> - 默认为收起不展开商品介绍状态
+> - 当一级分类增加展开则下方全部二级分类商品全部展开
+> - 当一级分类增加展开二级分类填no，商品状态包含被影响，您需要注意该特征⚠
 
-> 📝 **购物车配置说明**：  
-> 在魔方财务后台-商品设置-商品管理-编辑分组中配置分组标题，支持以下格式：  
-> ```  
-> {国家代码}*分组标题*yes/no  
-> ```  
-> **设置说明：**  
-> 1. 🌟 完整示例：`CN*香港 | 云服务器*yes`  
->    - 显示效果：【中国国旗】香港 | 云服务器（商品介绍默认展开）  
-> 2. 部分设置：  
->    - `香港 | 云服务器` - 不显示国旗，商品介绍默认收起  
->    - `CN*香港 | 云服务器` - 显示中国国旗，商品介绍默认收起  
->    - `香港 | 云服务器*yes` - 不显示国旗，商品介绍默认展开  
-> 3. 🖼️ 国家代码对应`/public/themes/cart/ogmiao/assets/img/flags/`目录下的国旗图片  
-> 
-> ⚠️ **注意**：配置格式中的`{国家代码}`和`*yes/no`都不会显示在用户实际看到的页面中  
+> 3. 分类标签
+> - 您可以在商品组标语增加：热门/无限流量/流量型/新品（只能选择一个，过多影响视觉效果所以没有多选功能）
 
-> 💡 **定制支持**：如果您有任何特殊的页面需求，我们都可以为您定制开发！
-
----
+<details>
+<summary>点击展开查看配置图片（该配置显示了CN国旗并展开商品介绍还显示了热门标签）</summary>
+<p align="center">
+  <img src="![image](https://github.com/user-attachments/assets/b343ab0e-fe45-4fd5-b869-3fbbf84dc966)
+" alt="购物车配置图片" width="800" />
+</p>
+</details>
 
 ### 👤 用户中心功能
-
 ✨ **优化设计** | 提供更好的用户体验  
+我觉得用户中心有很多页面设计的不是很好，希望二开作者可以改善这个问题
 
+💡 **定制支持**：如果您有任何特殊的页面需求，我们都可以为您定制开发！
 ---
-
-## 🎯 预览与性能
 
 ### 🔍 界面预览
 
+<details>
+<summary>首页</summary>
 <p align="center">
-  <img src="https://cloud.ogmiao.com/themes/web/ogmiao/img/index.png" alt="首页预览" width="800" />
+  <img src="[image][image](https://github.com/user-attachments/assets/b343ab0e-fe45-4fd5-b869-3fbbf84dc966)
+" alt="用户中心图片")
+" alt="用户中心图片" width="800" />
 </p>
+</details>
 
----
+<details>
+<summary>用户中心</summary>
+<p align="center">
+  <img src="![image](https://github.com/user-attachments/assets/b343ab0e-fe45-4fd5-b869-3fbbf84dc966)
+" alt="用户中心图片" width="800" />
+</p>
+</details>
 
-### 🏆 模板二改作者
-
-作者：Huan-Starvm  
-项目：[idcsmart-ogmiao-clientarea](https://github.com/Huan-Starvm/idcsmart-ogmiao-clientarea)  
-主要修改了 `clientarea.tpl` 文件  
-
----
-
-## 📅 未来计划
-
-- 🐱 **AI聊天小猫咪** - 无需用户KEY的智能客服助手，提供即时响应服务  
-
----
-
-## 🚀 开发者天地
-
-### ✨ 参与贡献
-
-🎯 **发现Bug** | 来提 Issue 吧！让我们一起抓虫子  
-🌟 **有想法** | Pull Request 随时欢迎  
-📚 **写文档** | 分享经验帮助他人  
-🌈 **译制化** | 让主题走向世界  
-
----
-
-### 🎮 快速上手指南
-
-```bash
-# 🔥 Clone 主题源码
-git clone https://github.com/DYMTHH/OGMIA-Theme-of-IDCsmart.git
-
-# 🏃‍♂️ 冲进项目目录
-cd OGMIA-Theme-of-IDCsmart
-
-# 📦 安装指引
-# 🏠 首页模板 -> /public/themes/web
-# 🛍️ 购物车模板 -> /public/themes/cart
-
-# 🎨 开发流程 
-# 1. ✍️ 修改代码，放飞创意
-# 2. 🔍 测试，确保完美运行
-# 3. 🎉 提交PR，等待合并
-```
+<details>
+<summary>购物车</summary>
+<p align="center">
+  <img src="![image](https://github.com/user-attachments/assets/b343ab0e-fe45-4fd5-b869-3fbbf84dc966)
+" alt="购物车图片" width="800" />
+</p>
+</details>
 
 ---
 
@@ -161,9 +124,10 @@ cd OGMIA-Theme-of-IDCsmart
 
 ### 🏆 优秀二开作者名录
 
-- **@Huan-Starvm**  
-  - 仓库链接：[idcsmart-ogmiao-clientarea](https://github.com/Huan-Starvm/idcsmart-ogmiao-clientarea)  
-  - 主要贡献：用户中心优化  
+- **@Huan-Starvm**
+作者：Huan-Starvm  
+项目：[idcsmart-ogmiao-clientarea](https://github.com/Huan-Starvm/idcsmart-ogmiao-clientarea)  
+主要修改了 `clientarea.tpl` 文件
 
 > 🎉 **欢迎二次开发**：我们非常支持开发者对主题进行优化和改进！如果你有新的想法：  
 > - 🔄 可以自由进行二次开发  
