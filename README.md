@@ -77,7 +77,7 @@
 <details>
 <summary>点击展开查看配置图片（该配置显示了CN国旗并展开商品介绍还显示了热门标签）</summary>
 <p align="center">
-  <img src="![image](https://github.com/user-attachments/assets/b343ab0e-fe45-4fd5-b869-3fbbf84dc966)
+  <img src="![image](https://raw.githubusercontent.com/DYMTHH/OGMIAO-Theme-of-IDCsmart/refs/heads/main/cartpz.png)
 " alt="购物车配置图片" width="800" />
 </p>
 </details>
@@ -94,7 +94,7 @@
 <details>
 <summary>首页</summary>
 <p align="center">
-  <img src="[image][image](https://github.com/user-attachments/assets/b343ab0e-fe45-4fd5-b869-3fbbf84dc966)
+  <img src="[image][image](https://raw.githubusercontent.com/DYMTHH/OGMIAO-Theme-of-IDCsmart/refs/heads/main/web.jpeg)
 " alt="用户中心图片")
 " alt="用户中心图片" width="800" />
 </p>
@@ -103,7 +103,7 @@
 <details>
 <summary>用户中心</summary>
 <p align="center">
-  <img src="![image](https://github.com/user-attachments/assets/b343ab0e-fe45-4fd5-b869-3fbbf84dc966)
+  <img src="![image](https://raw.githubusercontent.com/DYMTHH/OGMIAO-Theme-of-IDCsmart/refs/heads/main/clientarea.jpeg)
 " alt="用户中心图片" width="800" />
 </p>
 </details>
@@ -111,7 +111,7 @@
 <details>
 <summary>购物车</summary>
 <p align="center">
-  <img src="![image](https://github.com/user-attachments/assets/b343ab0e-fe45-4fd5-b869-3fbbf84dc966)
+  <img src="![image](https://raw.githubusercontent.com/DYMTHH/OGMIAO-Theme-of-IDCsmart/refs/heads/main/cart.jpeg)
 " alt="购物车图片" width="800" />
 </p>
 </details>
