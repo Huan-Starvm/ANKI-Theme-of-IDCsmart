@@ -1,5 +1,5 @@
 # 😺 OGMIA-Theme-of-IDCsmart 😺
-<img src="https://cloud.ogmiao.com/themes/web/ogmiao/img/2.webp" alt="橘喵云LOGO" width="600" />
+<img src="https://cloud.ogmiao.com/logo.webp" alt="橘喵云LOGO" width="600" />
 </p>
 
 
@@ -96,7 +96,7 @@
 <details>
 <summary>首页</summary>
 <p align="center">
-  <img src="[image][image](https://cloud.ogmiao.com/web.jpeg)
+  <img src="[image](https://cloud.ogmiao.com/web.jpeg)
 " alt="用户中心图片")
 " alt="用户中心图片" width="800" />
 </p>
