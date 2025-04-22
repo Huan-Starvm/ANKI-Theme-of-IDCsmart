@@ -95,21 +95,21 @@
 <details>
 <summary>首页</summary>
 <p align="center">
-![web](https://github.com/user-attachments/assets/7ed99537-2d50-4dce-ba9f-ae468ff11455)
+<img width="646" alt="cartpz" src="https://github.com/user-attachments/assets/7ed99537-2d50-4dce-ba9f-ae468ff11455" />
 </p>
 </details>
 
 <details>
 <summary>用户中心</summary>
 <p align="center">
-![clientarea](https://github.com/user-attachments/assets/8b9d64b6-d605-4c63-9258-3d8652e43751)
+<img width="646" alt="cartpz" src="https://github.com/user-attachments/assets/8b9d64b6-d605-4c63-9258-3d8652e43751" />
 </p>
 </details>
 
 <details>
 <summary>购物车</summary>
 <p align="center">
-![cart](https://github.com/user-attachments/assets/ac13aea7-5543-408a-9ee8-8892c7ceb443)
+<img width="646" alt="cartpz" src="https://github.com/user-attachments/assets/ac13aea7-5543-408a-9ee8-8892c7ceb443" />
 </p>
 </details>
 
