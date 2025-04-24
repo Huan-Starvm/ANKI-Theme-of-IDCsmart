@@ -87,6 +87,17 @@
 ✨ **优化设计** | 提供更好的用户体验  
 我觉得用户中心有很多页面设计的不是很好，希望二开作者可以改善这个问题
 
+**📝 用户中心配置说明**：
+服务器列表显示也就是service页面，建议修改导航管理中的列表模板页
+
+<details>
+<summary>配置实例</summary>
+<p align="center">
+<img width="646" alt="cartpz" src="https://github.com/user-attachments/assets/5f691353-fac1-45c1-b5d9-515c4e75980b" />
+</p>
+</details>
+
+
 💡 **定制支持**：如果您有任何特殊的页面需求，我们都可以为您定制开发！
 ---
 
