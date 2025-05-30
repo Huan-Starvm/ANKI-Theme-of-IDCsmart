@@ -6,19 +6,19 @@
 <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://anki1.cn/themes/web/ogmiao/img/1.webp" as="image">
-<link rel="icon" href="https://anki1.cn/themes/web/ogmiao/img/1.ico">
-<link rel="apple-touch-icon" href="https://anki1.cn/themes/web/ogmiao/img/1.ico">
-<link rel="shortcut icon" href="https://anki1.cn/themes/web/ogmiao/img/1.ico">
+<link rel="preload" href="{$setting.web_view}/img/1.webp" as="image">
+<link rel="icon" href="{$setting.web_view}/img/1.ico">
+<link rel="apple-touch-icon" href="{$setting.web_view}/img/1.ico">
+<link rel="shortcut icon" href="{$setting.web_view}/img/1.ico">
 <link href="{$setting.web_view}/fonts/Poppins-Regular-Medium-SemiBold-Bold.css" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript>
  <link href="{$setting.web_view}/fonts/Poppins-Regular-Medium-SemiBold-Bold.css" rel="stylesheet">
 </noscript>
 <meta charset="UTF-8">
-<link rel="robots" href="https://anki1.cn/themes/web/ogmiao/robots.txt" type="text/plain">
-<meta name="author" content="AnkiCloud">
+<link rel="robots" href="{$setting.web_view}/robots.txt" type="text/plain">
+<meta name="author" content="{$setting.company_name}">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="{$canonical|default='https://anki1.cn/'}">
+<link rel="canonical" href="{$canonical|default='https://www.lxc.wiki'}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -992,7 +992,7 @@ footer {
  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
  width: 30px;
  height: 30px;
- background-image: url('https://anki1.cn/themes/web/ogmiao/img/miao.svg');
+ background-image: url('./themes/web/starvm-phj/img/miao.svg');
  background-size: contain;
  background-repeat: no-repeat;
  background-position: center;
@@ -1090,12 +1090,12 @@ footer {
    <div class="footer-grid">
        <div class="footer-col footer-about">
            <h3>关于我们</h3>
-           <p>AnkiCloud是一家专业的IDC服务提供商，致力于为企业提供高品质的数据中心服务，包括服务器托管、云服务器、网络安全等全方位解决方案。</p>
+           <p>{$setting.company_name}是一家专业的IDC服务提供商，致力于为企业提供高品质的数据中心服务，包括服务器托管、云服务器、网络安全等全方位解决方案。</p>
            <div class="footer-tagline">您的数字家园守护者</div>
            <div class="footer-social">
                <a href="#" class="footer-social-icon">📱</a>
                <a href="#" class="footer-social-icon">💬</a>
-               <a href="#" class="footer-social-icon">📧</a>
+               <a href="mailto:{$setting.company_email}" class="footer-social-icon">📧</a>
            </div>
        </div>
        <div class="footer-col">
@@ -1105,30 +1105,30 @@ footer {
                <li><a href="#">云服务器</a></li>
                <li><a href="#">网络安全</a></li>
                <li><a href="#">域名注册</a></li>
-               <li><a href="https://anki1.cn/solutions.html">解决方案</a></li>
+               <li><a href="./solutions.html">解决方案</a></li>
            </ul>
        </div>
        <div class="footer-col">
            <h3>帮助中心</h3>
            <ul class="footer-links">
-               <li><a href="#">常见问题</a></li>
-               <li><a href="#">技术文档</a></li>
-               <li><a href="https://anki1.cn/terms.html">服务条款</a></li>
-               <li><a href="https://anki1.cn/privacy.html">隐私政策</a></li>
-               <li><a href="#">投诉建议</a></li>
+               <li><a href="./knowledgebase">常见问题</a></li>
+               <li><a href="./news">新闻中心</a></li>
+               <li><a href="./terms.html">服务条款</a></li>
+               <li><a href="./privacy.html">隐私政策</a></li>
+               <li><a href="./submitticket">投诉建议</a></li>
            </ul>
        </div>
        <div class="footer-col">
            <h3>联系方式</h3>
            <ul class="footer-links">
-               <li><a href="#">暂无电话</a></li>
-               <li><a href="#">ogmiao@outlook.com</a></li>
-               <li><a href="#">上海市浦东新区</a></li>
+               <li><a href="#">{$setting.company_phone}</a></li>
+               <li><a href="mailto:{$setting.company_email}">{$setting.company_email}</a></li>
+               <li><a href="#"></a>{$setting.company_address}</li>
            </ul>
        </div>
    </div>
    <div class="copyright">
-       <p>&copy; 2025 AnkiCloud. 保留所有权利 | <a href="https://anki1.cn/terms.html" style="color: inherit; text-decoration: underline;">服务条款</a> | <a href="https://anki1.cn/privacy.html" style="color: inherit; text-decoration: underline;">隐私政策</a></p>
+       <p>&copy; 2025 {$setting.company_name}. 保留所有权利 | <a href="./terms.html" style="color: inherit; text-decoration: underline;">服务条款</a> | <a href="./privacy.html" style="color: inherit; text-decoration: underline;">隐私政策</a></p>
    </div>
 </div>
 <a href="#" id="backToTop" class="back-to-top" aria-label="回到顶部">
