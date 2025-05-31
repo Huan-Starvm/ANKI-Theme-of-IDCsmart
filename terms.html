@@ -1,27 +1,20 @@
 {include file="common/header" /}
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
     <meta charset="UTF-8">
-    <title>AnkiCloud | 服务条款</title>
-    <meta name="description" content="AnkiCloud服务条款，详细说明我们的服务规则、用户责任与义务、服务提供方责任与义务等内容，请仔细阅读。">
-    <meta name="keywords" content="AnkiCloud,服务条款,用户协议,IDC服务,云服务条款">
+    <title>{$setting.company_name} | 服务条款</title>
+    <meta name="description" content="{$setting.company_name}服务条款，详细说明我们的服务规则、用户责任与义务、服务提供方责任与义务等内容，请仔细阅读。">
+    <meta name="keywords" content="{$setting.company_name},服务条款,用户协议,IDC服务,云服务条款">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#F08A5D" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#D07A4D" media="(prefers-color-scheme: dark)">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ogmiao.com/terms.html">
-    <meta property="og:title" content="AnkiCloud | 服务条款">
-    <meta property="og:description" content="AnkiCloud服务条款，详细说明我们的服务规则、用户责任与义务、服务提供方责任与义务等内容，请仔细阅读。">
-    <meta property="og:image" content="https://ogmiao.com/static/images/og-image.jpg">
+    <meta property="og:url" content="{$setting.web_url}/terms.html">
+    <meta property="og:title" content="{$setting.company_name} | 服务条款">
+    <meta property="og:description" content="{$setting.company_name}服务条款，详细说明我们的服务规则、用户责任与义务、服务提供方责任与义务等内容，请仔细阅读。">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ogmiao.com/terms.html">
-    <meta property="twitter:title" content="AnkiCloud | 服务条款">
-    <meta property="twitter:description" content="AnkiCloud服务条款，详细说明我们的服务规则、用户责任与义务等内容，请仔细阅读。">
-    <meta property="twitter:image" content="https://ogmiao.com/static/images/og-image.jpg">
-</head>
-<body>
+    <meta property="twitter:url" content="{$setting.web_url}/terms.html">
+    <meta property="twitter:title" content="{$setting.company_name} | 服务条款">
+    <meta property="twitter:description" content="{$setting.company_name}服务条款，详细说明我们的服务规则、用户责任与义务等内容，请仔细阅读。">
 <style>
     .terms-container {
         max-width: 1000px;
@@ -177,11 +170,11 @@
 <div class="terms-container">
     <div class="terms-header">
         <h1>服务条款【该页面为模板】</h1>
-        <p>欢迎使用AnkiCloud提供的服务。请仔细阅读以下条款，使用我们的服务即表示您同意这些条款。</p>
+        <p>欢迎使用{$setting.company_name}提供的服务。请仔细阅读以下条款，使用我们的服务即表示您同意这些条款。</p>
     </div>
     <div class="terms-section">
         <h2>1. 服务定义</h2>
-        <p>AnkiCloud（以下简称"我们"）是一家专业的IDC服务提供商，提供包括但不限于服务器托管、云服务器租用、网络安全服务等在内的互联网数据中心服务。</p>
+        <p>{$setting.company_name}（以下简称"我们"）是一家专业的IDC服务提供商，提供包括但不限于服务器托管、云服务器租用、网络安全服务等在内的互联网数据中心服务。</p>
         <p>本服务条款（以下简称"条款"）适用于您使用我们提供的所有服务，包括我们的网站、客户端应用程序、API接口以及其他相关服务。</p>
     </div>
     <div class="terms-section">
@@ -262,7 +255,7 @@
         <p>如果本条款的任何部分被认定为无效或不可执行，该部分将被视为可与本条款分割，不影响其余条款的有效性和可执行性。</p>
     </div>
     <div class="terms-footer">
-        <p>如果您对本服务条款有任何疑问，请联系我们：<a href="mailto:ogmiao@outlook.com">ogmiao@outlook.com</a></p>
+        <p>如果您对本服务条款有任何疑问，请联系我们：<a href="mailto:{$setting.company_email}">{$setting.company_email}</a></p>
         <p class="terms-updated">最后更新日期：2025年3月28日</p>
     </div>
 </div>
