@@ -1,36 +1,32 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>AnkiCloud | 行业解决方案 - 专业定制化云服务</title>
-   <meta name="description" content="AnkiCloud为各行各业提供定制化的云服务解决方案，包括金融、医疗、文旅、教育、传媒等多个行业，助力企业数字化转型，提升业务效率，创造更大价值。">
-   <meta name="keywords" content="AnkiCloud,行业解决方案,云服务,金融云,医疗云,文旅云,教育云,传媒云,企业数字化,定制化解决方案">
+   <title>{$setting.company_name} | 行业解决方案 - 专业定制化云服务</title>
+   <meta name="description" content="{$setting.company_name}为各行各业提供定制化的云服务解决方案，包括金融、医疗、文旅、教育、传媒等多个行业，助力企业数字化转型，提升业务效率，创造更大价值。">
+   <meta name="keywords" content="{$setting.company_name},行业解决方案,云服务,金融云,医疗云,文旅云,教育云,传媒云,企业数字化,定制化解决方案">
    <meta name="color-scheme" content="light">
    <meta name="theme-color" content="#ffffff">
    <meta property="og:type" content="website">
-   <meta property="og:url" content="https://www.ogmiao.com/solutions.html">
-   <meta property="og:title" content="AnkiCloud | 行业解决方案 - 专业定制化云服务">
-   <meta property="og:description" content="AnkiCloud为各行各业提供定制化的云服务解决方案，助力企业数字化转型，提升业务效率，创造更大价值。">
-   <meta property="og:image" content="https://anki1.cn/themes/web/ogmiao/images/og-image-solutions.jpg">
+   <meta property="og:url" content="{$setting.web_url}/solutions.html">
+   <meta property="og:title" content="{$setting.company_name} | 行业解决方案 - 专业定制化云服务">
+   <meta property="og:description" content="{$setting.company_name}为各行各业提供定制化的云服务解决方案，助力企业数字化转型，提升业务效率，创造更大价值。">
    <meta property="twitter:card" content="summary_large_image">
-   <meta property="twitter:url" content="https://www.ogmiao.com/solutions.html">
-   <meta property="twitter:title" content="AnkiCloud | 行业解决方案 - 专业定制化云服务">
-   <meta property="twitter:description" content="AnkiCloud为各行各业提供定制化的云服务解决方案，助力企业数字化转型，提升业务效率，创造更大价值。">
-   <meta property="twitter:image" content="https://anki1.cn/themes/web/ogmiao/images/og-image-solutions.jpg">
+   <meta property="twitter:url" content="{$setting.web_url}/solutions.html">
+   <meta property="twitter:title" content="{$setting.company_name} | 行业解决方案 - 专业定制化云服务">
+   <meta property="twitter:description" content="{$setting.company_name}为各行各业提供定制化的云服务解决方案，助力企业数字化转型，提升业务效率，创造更大价值。">
    <link rel="stylesheet" href="{$setting.web_view}/assets/css/solutions.css">
    <script type="application/ld+json">
    {
        "@context": "https://schema.org",
        "@type": "WebPage",
-       "name": "AnkiCloud行业解决方案",
-       "description": "AnkiCloud为各行各业提供定制化的云服务解决方案，包括金融、医疗、文旅、教育、传媒等多个行业。",
-       "provider":  "AnkiCloud行业解决方案",
-       "description": "AnkiCloud为各行各业提供定制化的云服务解决方案，包括金融、医疗、文旅、教育、传媒等多个行业。",
+       "name": "{$setting.company_name}行业解决方案",
+       "description": "{$setting.company_name}为各行各业提供定制化的云服务解决方案，包括金融、医疗、文旅、教育、传媒等多个行业。",
+       "provider":  "{$setting.company_name}行业解决方案",
+       "description": "{$setting.company_name}为各行各业提供定制化的云服务解决方案，包括金融、医疗、文旅、教育、传媒等多个行业。",
        "provider": {
            "@type": "Organization",
-           "name": "AnkiCloud",
-           "url": "https://www.ogmiao.com"
+           "name": "{$setting.company_name}",
+           "url": "{$setting.web_url}"
        },
        "offers": {
            "@type": "AggregateOffer",
@@ -48,7 +44,7 @@
    <div class="solutions-hero">
        <div class="solutions-hero-content">
            <h1>行业解决方案</h1>
-           <p>AnkiCloud为各行各业提供定制化的云服务解决方案，助力企业数字化转型，提升业务效率，创造更大价值。</p>
+           <p>{$setting.company_name}为各行各业提供定制化的云服务解决方案，助力企业数字化转型，提升业务效率，创造更大价值。</p>
        </div>
    </div>
    <div class="industry-nav">
@@ -71,7 +67,7 @@
    </div>
    <div class="industry-grid">
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">金融解决方案</h3>
                </div>
@@ -82,7 +78,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">医疗解决方案</h3>
                </div>
@@ -93,7 +89,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">文旅解决方案</h3>
                </div>
@@ -104,7 +100,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">汽车出行解决方案</h3>
                </div>
@@ -115,7 +111,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">教育解决方案</h3>
                </div>
@@ -126,7 +122,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">传媒解决方案</h3>
                </div>
@@ -137,7 +133,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">交通物流解决方案</h3>
                </div>
@@ -148,7 +144,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">游戏解决方案</h3>
                </div>
@@ -159,7 +155,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">互联网解决方案</h3>
                </div>
@@ -170,7 +166,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">制造解决方案</h3>
                </div>
@@ -181,7 +177,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">政务解决方案</h3>
                </div>
@@ -192,7 +188,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">智能终端解决方案</h3>
                </div>
@@ -203,7 +199,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">建筑与不动产解决方案</h3>
                </div>
@@ -214,7 +210,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">音视频解决方案</h3>
                </div>
@@ -225,7 +221,7 @@
            </div>
        </div>
        <div class="industry-card">
-           <div class="industry-card-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=180&width=300');">
+           <div class="industry-card-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=180&width=300');">
                <div class="industry-card-overlay">
                    <h3 class="industry-card-title">零售解决方案</h3>
                </div>
@@ -289,21 +285,21 @@
            <h3 class="industry-subtitle">应用场景</h3>
            <div class="scenarios-grid">
                <div class="scenario-card">
-                   <div class="scenario-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                   <div class="scenario-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=160&width=300');"></div>
                    <div class="scenario-content">
                        <h4 class="scenario-title">核心交易系统</h4>
                        <p class="scenario-description">为银行、证券、保险等金融机构提供高性能、高可用的核心交易系统云服务，保障业务连续性。</p>
                    </div>
                </div>
                <div class="scenario-card">
-                   <div class="scenario-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                   <div class="scenario-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=160&width=300');"></div>
                    <div class="scenario-content">
                        <h4 class="scenario-title">风控系统</h4>
                        <p class="scenario-description">基于大数据和人工智能技术，提供实时风险监控和分析，提升风险管理能力。</p>
                    </div>
                </div>
                <div class="scenario-card">
-                   <div class="scenario-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                   <div class="scenario-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=160&width=300');"></div>
                    <div class="scenario-content">
                        <h4 class="scenario-title">金融科技创新</h4>
                        <p class="scenario-description">支持区块链、大数据、人工智能等金融科技创新应用，加速金融服务创新。</p>
@@ -381,21 +377,21 @@
            <h3 class="industry-subtitle">应用场景</h3>
            <div class="scenarios-grid">
                <div class="scenario-card">
-                   <div class="scenario-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                   <div class="scenario-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=160&width=300');"></div>
                    <div class="scenario-content">
                        <h4 class="scenario-title">智慧医院</h4>
                        <p class="scenario-description">支持医院信息系统云化，实现医疗服务流程优化，提升医疗服务质量和效率。</p>
                    </div>
                </div>
                <div class="scenario-card">
-                   <div class="scenario-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                   <div class="scenario-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=160&width=300');"></div>
                    <div class="scenario-content">
                        <h4 class="scenario-title">远程医疗</h4>
                        <p class="scenario-description">提供高质量视频会议和数据传输服务，支持远程会诊、远程监护和远程教育。</p>
                    </div>
                </div>
                <div class="scenario-card">
-                   <div class="scenario-img" style="background-image: url('https://anki1.cn/themes/web/ogmiao/placeholder.svg?height=160&width=300');"></div>
+                   <div class="scenario-img" style="background-image: url('{$setting.web_view}/placeholder.svg?height=160&width=300');"></div>
                    <div class="scenario-content">
                        <h4 class="scenario-title">医疗影像云</h4>
                        <p class="scenario-description">提供医疗影像存储、处理和分析服务，支持影像数据共享和AI辅助诊断。</p>
