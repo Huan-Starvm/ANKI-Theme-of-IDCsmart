@@ -1,36 +1,32 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
 <head>
    <meta charset="UTF-8">
-   <title>AnkiCloud | 隐私政策</title>
-   <meta name="description" content="AnkiCloud隐私政策详细说明我们如何收集、使用、披露、处理和保护您的个人信息，以及您对个人数据的权利。我们致力于保护您的隐私和个人信息安全。">
-   <meta name="keywords" content="AnkiCloud,隐私政策,数据保护,个人信息,用户隐私,数据安全,隐私声明,IDC服务隐私">
+   <title>{$setting.company_name} | 隐私政策</title>
+   <meta name="description" content="{$setting.company_name}隐私政策详细说明我们如何收集、使用、披露、处理和保护您的个人信息，以及您对个人数据的权利。我们致力于保护您的隐私和个人信息安全。">
+   <meta name="keywords" content="{$setting.company_name},隐私政策,数据保护,个人信息,用户隐私,数据安全,隐私声明,IDC服务隐私">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="color-scheme" content="light">
    <meta name="theme-color" content="#f08a5d">
    <meta property="og:type" content="website">
-   <meta property="og:url" content="https://www.ogmiao.com/privacy.html">
-   <meta property="og:title" content="AnkiCloud | 隐私政策">
-   <meta property="og:description" content="AnkiCloud隐私政策详细说明我们如何收集、使用、披露、处理和保护您的个人信息，以及您对个人数据的权利。我们致力于保护您的隐私和个人信息安全。">
-   <meta property="og:image" content="https://www.ogmiao.com/static/images/og-privacy.jpg">
+   <meta property="og:url" content="{$setting.web_url}/privacy.html">
+   <meta property="og:title" content="{$setting.company_name} | 隐私政策">
+   <meta property="og:description" content="{$setting.company_name}隐私政策详细说明我们如何收集、使用、披露、处理和保护您的个人信息，以及您对个人数据的权利。我们致力于保护您的隐私和个人信息安全。">
    <meta property="twitter:card" content="summary_large_image">
-   <meta property="twitter:url" content="https://www.ogmiao.com/privacy.html">
-   <meta property="twitter:title" content="AnkiCloud | 隐私政策">
-   <meta property="twitter:description" content="AnkiCloud隐私政策详细说明我们如何收集、使用、披露、处理和保护您的个人信息，以及您对个人数据的权利。我们致力于保护您的隐私和个人信息安全。">
-   <meta property="twitter:image" content="https://www.ogmiao.com/static/images/og-privacy.jpg">
+   <meta property="twitter:url" content="{$setting.web_url}/privacy.html">
+   <meta property="twitter:title" content="{$setting.company_name} | 隐私政策">
+   <meta property="twitter:description" content="{$setting.company_name}隐私政策详细说明我们如何收集、使用、披露、处理和保护您的个人信息，以及您对个人数据的权利。我们致力于保护您的隐私和个人信息安全。">
    <link rel="stylesheet" href="{$setting.web_view}/assets/css/privacy.css">
    <script type="application/ld+json">
    {
      "@context": "https://schema.org",
      "@type": "WebPage",
-     "name": "AnkiCloud隐私政策",
-     "description": "AnkiCloud隐私政策详细说明我们如何收集、使用、披露、处理和保护您的个人信息，以及您对个人数据的权利。",
+     "name": "{$setting.company_name}隐私政策",
+     "description": "{$setting.company_name}隐私政策详细说明我们如何收集、使用、披露、处理和保护您的个人信息，以及您对个人数据的权利。",
      "publisher": {
        "@type": "Organization",
-       "name": "AnkiCloud",
+       "name": "{$setting.company_name}",
        "logo": {
          "@type": "ImageObject",
-         "url": "https://www.ogmiao.com/static/images/logo.png"
+         "url": "{$setting.web_url}/img/logo.png"
        }
      },
      "inLanguage": "zh-CN",
@@ -44,7 +40,7 @@
 <div class="privacy-container">
    <div class="privacy-header">
        <h1>隐私政策【该页面为模板】</h1>
-       <p>AnkiCloud重视并保护您的隐私。本隐私政策说明我们如何收集、使用、披露、处理和保护您的个人信息。</p>
+       <p>{$setting.company_name}重视并保护您的隐私。本隐私政策说明我们如何收集、使用、披露、处理和保护您的个人信息。</p>
    </div>
    <div class="privacy-highlight">
        <p><strong>请注意：</strong>使用我们的服务即表示您信任我们对您信息的处理方式。我们理解这是一项重大责任，努力保护您的信息并让您拥有控制权。</p>
@@ -168,8 +164,8 @@
        <h2>10. 联系我们</h2>
        <p>如果您对本隐私政策或我们的隐私实践有任何疑问、意见或请求，请通过以下方式联系我们：</p>
        <ul>
-           <li>电子邮件：<a href="mailto:ogmiao@outlook.com">ogmiao@outlook.com</a></li>
-           <li>地址：上海市浦东新区</li>
+           <li>电子邮件：<a href="mailto:{$setting.company_email}">{$setting.company_email}</a></li>
+           <li>地址：{$setting.company_address}</li>
        </ul>
        <p>我们将在合理的时间内回应您的请求。</p>
    </div>
