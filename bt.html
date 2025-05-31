@@ -6,7 +6,7 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="{$setting.web_view}/img/1.png" as="image">
+    <link rel="preload" href="{$setting.web_view}/img/logo.png" as="image">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,13 +16,11 @@
     <meta name="keywords" content="宝塔面板,{$setting.company_name},服务器管理,云服务,一键部署,网站管理,数据库管理">
     <meta property="og:title" content="{$setting.company_name} | 宝塔面板">
     <meta property="og:description" content="{$setting.company_name}联合定制版宝塔面板，为您提供强大的云服务管理工具，支持一键部署、监控、备份等功能，助您轻松管��云服务，提升工作效率。">
-    <meta property="og:image" content="https://anki1.cn/img/2.webp">
-    <meta property="og:url" content="https://anki1.cn/bt.html">
+    <meta property="og:url" content="{$setting.web_url}/bt.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{$setting.company_name} | 宝塔面板">
     <meta name="twitter:description" content="{$setting.company_name}联合定制版宝塔面板，为您提供强大的云服务管理工具，支持一键部署、监控、备份等功能，助您轻松管理云服务，提升工作效率。">
-    <meta name="twitter:image" content="https://anki1.cn/img/2.webp">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,7 +44,7 @@
     "name": "{$setting.company_name}",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://anki1.cn/img/logo.png"
+      "url": "{$setting.web_view}/img/logo.png"
     }
   }
 }
